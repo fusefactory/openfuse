@@ -1,5 +1,7 @@
 ---
-published: true
+published:    true
+author:       Luca Camellini
+tags:         test dokk interactive
 ---
 fuse creates first post with jakyll.
 
