@@ -20,26 +20,6 @@ title: Home
   {% endfor %}
 </div>
 
-{% for tag in site.posts %}
-  <div class="medium-6 large-3 columns list-view-all">
-
-  {% assign currentTag = tag | first %}
-
-    <h4>{{ currentTag | upcase}}</h4>
-
-    {% for post in site.posts %}
-      {% if post.tags contains currentTag %}
-      <ul class="posts">
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      </ul>
-      {% endif %}
-    {% endfor %}
-
-  </div>
-{% endfor %}
-
 <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
