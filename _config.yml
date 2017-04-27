@@ -2,10 +2,10 @@
 permalink:           pretty
 
 # Setup
-title:               Poole
+title:               openfuse*
 tagline:             The Jekyll Butler
-url:                 http://getpoole.com
-paginate:            1
+url:                 http://www.fuseworks.it
+paginate:            3
 baseurl:             ""
 
 # Assets
