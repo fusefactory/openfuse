@@ -1,0 +1,12 @@
+<!--  This file is used for including an sidebar in a page  -->
+<div class="sidebar">
+	<div id='cssmenu'>
+		<h2 style="text-align: center; padding: 10px 10px 10px 0;">{{ include.title }}</h2>
+		<ul>
+		<!--  recursively create list elements for sidebar menu  -->
+		{% for tag in include.content %}
+			{% include util/recursive_list.html tag=tag %}
+		{% endfor %}
+		</ul>
+	</div>
+</div>
