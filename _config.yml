@@ -7,7 +7,6 @@ tagline:             The fuse* sharing knoledge blog.
 url:                 http://www.fuseworks.it
 paginate:            3
 baseurl:             ""
-breadcrumbs:         true
 
 # Assets
 #
