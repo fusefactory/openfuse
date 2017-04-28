@@ -1,62 +1,64 @@
-<div class="sidebar">
-	<div>
-		
+{% capture sidebar %}
+{% comment %}
+<!-- 
+Handler for toggling the sidebar `.sidebar-toggle-checkbox` is used for regular
+styles and `#sidebar-toggle-checkbox` for behavior. 
+-->
+{% endcomment %}
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
-		<h4>Categories</h4>
-		<ul>
-			{% for category in site.categories %}
-			<li>
-				<a onclick="redirect('/categories.html#{{ category[0] }}')"> 
-				{% if page.categories contains category[0] %}
-				<b>{{ category[0] }}</b>
-				{% else %}
-					{{ category[0] }}
-				{% endif %}
-				</a>
-				<sup>[{{ category[1].size }}]</sup>
-			</li>
-			{% endfor %}
-		</ul>
-		<hr/>
-		<h4>Tags</h4>
-		<ul class="sidebar_tags">
-			{% for tag in site.tags %}
-<!-- 			<li> -->
-				<a onclick="redirect('/tags.html#{{ tag[0] }}')">
-<!-- 				<a href="/blog/tag/testtag#{{ tag[0] }}"> -->
-				{% if page.tags contains tag[0] %}
-					<b>{{tag[0]}}</b>
-				{% else %}
-					{{ tag[0] }}
-				{% endif %}
-				</a>
-				<sup>[{{ tag[1].size }}]</sup>
+<div class="sidebar" id="sidebar">
 
-<!-- 			</li> -->
-			{% endfor %}
-		</ul>
-		<hr/>
-		<h4>Archive</h4>
-		<ul>
-{% if page.date %}{% capture pageYear %}{{page.date| date: "%Y"}}{% endcapture %}{% endif %}
-{% for y in site.years reversed %}
-	{% if y  == pageYear %}
-	<li><b><a href="/archive.html#{{y}}">{{y}}</a></b></li>
-	{% else %}
-	<li><a href="/archive.html#{{y}}">{{y}}</a></li>
-	{% endif %}
-{% endfor %}
-		</ul>
-	</div>
+  {% if site.author_thumbnail && site.author_thumbnail != '' %}
+  <img 
+    src="{{ site.author_thumbnail | prepend: site.baseurl | prepend: site.url }}"
+    alt="{{ site.title }}" />
+
+  {% endif %}
+
+  <div class="sidebar-info">
+      <p>
+        {{ site.description }}
+      </p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    <a class="sidebar-nav-item{% if page.url == '/index.html' %} active {% endif %}" 
+      href="{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}"> 
+      Home
+    </a>
+
+    {% for item in site.data.main-nav %}
+    {% assign item_url = item.href | append:"/" %}
+    {% if item_url == page.url %}
+    {% assign c = "active" %}
+    {% else %}
+    {% assign c = "" %}
+    {% endif %}
+
+    <a class="sidebar-nav-item {{ c }}" 
+      href="{{ item.href | prepend: site.baseurl | prepend: site.url }}">
+      {{ item.title }}
+    </a>
+    {% endfor %}
+
+    <a class="sidebar-nav-item" 
+      href="http://github.com/{{ site.theme.social.github }}"
+      target="_blank">
+      GitHub/Download
+    </a>
+
+  </nav>
+
+  <div class="sidebar-info small">
+     <p>
+       Made by <a href="http://gayan.me" target="_blank">Gayan Virajith</a> For everyone.
+       Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
+     </p>
+  </div>
+
+  {% include social.html %}
+
 </div>
-
-<script type="text/javascript">
-
-	function redirect(url){
-		//alert(url);
-		window.history.pushState('test', "Title", url);
-		//window.location.href=url;
-		window.location.reload();
-	}
-	
-</script>
+{% endcapture %}{{ sidebar | strip_newlines }}
