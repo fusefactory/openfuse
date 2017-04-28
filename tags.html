@@ -1,0 +1,23 @@
+---
+layout: default
+title: Tags
+---
+
+
+<div id="tags">
+<!--      <h1>Articles by a tag</h1> -->
+	{% for tag in site.tags %}	
+	<div id="{{tag[0]}}" style="display:none">
+	<h1>Articles by the tag "{{tag[0]}}"</h1>
+	<br/>
+<!-- 	<h2>Tag: "{{tag[0]}}"</h2> -->
+	<table class="sublist">
+		{% for f in tag[1] %}
+		<tr><td><a href="{{f.url}}">{{ f.title }}</a></td><td>{{ f.date |date: "%Y/%m/%d"}}</td></tr>
+		{% endfor %}
+	</table>
+	</div>	
+	{% endfor %}
+</div>
+
+{% include tags_common.html %}
