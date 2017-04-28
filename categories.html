@@ -1,0 +1,23 @@
+---
+layout: default
+title: Categories
+---
+
+<div id="categories">
+<!--     <h1>Articles by a category</h1> -->
+	{% for cat in site.categories %}	
+	{% if cat[0] != 'blog' %}
+	<div id="{{cat[0]}}" style="display:none">
+	 <h1>Articles by the category "{{cat[0]}}"</h1>
+	 <br/>
+<!-- 	<h2>Category: "{{cat[0]}}"</h2> -->
+	<table class="sublist">
+		{% for f in cat[1] %}
+		<tr><td><a href="{{f.url}}">{{ f.title }}</a></td><td>{{ f.date |date: "%Y/%m/%d"}}</td></tr>
+		{% endfor %}
+	</table>
+	</div>
+	{% endif %}
+	{% endfor %}
+</div>
+{% include tags_common.html %}
