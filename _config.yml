@@ -30,7 +30,6 @@ github:
 gems:
   - jekyll-paginate
   - jekyll-gist
-
+  - jekyll-vimeo
+  
 theme: jekyll-theme-minimal
-
-plugins:            video-embed.rd
