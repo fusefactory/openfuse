@@ -1,0 +1,7 @@
+{% if page.categories %}
+<div class="categories"><i>Categories: </i> 
+	{% for cat in page.categories %}
+	<span class="category"><a href="/categories.html#{{cat}}">{{cat}}</a></span>
+	{% endfor %}
+</div>
+{% endif %}
