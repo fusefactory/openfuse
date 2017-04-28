@@ -9,7 +9,7 @@
 locale                   : "en"
 title                    : "OPENFUSE*"
 title_separator          : "-"
-name                     : "fuse* sharing knowledge blog."
+name                     : "fuse* sharing knowledge blog"
 description              : #"Sharing knowledge blog."
 url                      : #https://www.fuseworks.it
 baseurl                  : #https://fusedeveloper.github.io
