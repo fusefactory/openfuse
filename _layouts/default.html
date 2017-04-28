@@ -14,7 +14,13 @@
       </header>
 
       <main>
-        {{ content }}
+        <div class="container_clumn_1">test1</div>
+		    <div class="container_clumn_2">
+			    <div id="main" role="main" class="content">{{ content }}</div>
+		    </div>
+        <div class="container_clumn_3">test3</div>
+	    	<div class="container_clumn_4">{% include sidebar.html %}</div>
+    		<div class="container_clumn_5">test5</div>
       </main>
 
       <footer class="footer">
