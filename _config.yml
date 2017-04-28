@@ -11,10 +11,10 @@ title                    : "OPENFUSE*"
 title_separator          : "-"
 name                     : "fuse*"
 description              : "Sharing knowledge blog."
-url                      : https://www.fuseworks.it
-baseurl                  : https://fusedeveloper.github.io
-repository               : https://github.com/fusedeveloper
-teaser                   : "/images/fuse_logo_solo_black.png"
+url                      : #https://www.fuseworks.it
+baseurl                  : #https://fusedeveloper.github.io
+repository               : #https://github.com/fusedeveloper
+teaser                   : #"/images/fuse_logo_solo_black.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
