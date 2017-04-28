@@ -5,7 +5,7 @@ tags:         [test,dokk,interactive]
 ---
 Code inside the post...
 
-'''
+```
 .highlight {
   margin: 0;
   padding: 1em;
@@ -13,7 +13,7 @@ Code inside the post...
   font-size: $type-size-7;
   line-height: 1.8;
 }
-'''
+```
 
 ![Image of Ljos](/images/ljos.png)
 
