@@ -1,132 +1,160 @@
-# Gaya Jekyll Theme
+# [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)
 
-Modern responsive theme made for jekyll blogging platform. 
-Gaya is a simple theme build from ground up with the focus of performance. 
-The theme itself quickly adapts to the users device, so it looks great on 
-smartphones, tablets, desktops or even the large monitors.
+[![GitHub release](https://img.shields.io/gem/v/minimal-mistakes-jekyll.svg)](https://github.com/mmistakes/minimal-mistakes/releases) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
 
-- Ability to change theme color at any time with any color.
-- Easy customizable menu navigation.
-- SEO Friendly
-- Embed image, YouTube/Vimeo video or SoundCloud audio to your post.
+Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+
+See what's new in the [CHANGELOG](CHANGELOG.md).
+
+:sparkles: Minimal Mistakes is now available as a [Ruby gem](https://rubygems.org/gems/minimal-mistakes-jekyll). Consult the [Quick-Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) and [this blog post](https://mmistakes.github.io/minimal-mistakes/jekyll/gemified-theme-beta/) to learn how to upgrade.
+
+[![Minimal Mistakes live preview][2]][1]
+
+[1]: https://mmistakes.github.io/minimal-mistakes/
+[2]: screenshot.png (live preview)
+
+![layout examples](screenshot-layouts.png)
+
+## Notable Features
+
+- "Gemified" for easier install/upgrading
+- Compatible with Jekyll 3.x and GitHub Pages
+- Support for Jekyll's built-in Sass/SCSS preprocessor
+- Several responsive layout options (single, archive index, splash, and paginated home page)
+- SEO optimized with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](http://ogp.me/) data
+- Optional [header images](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#headers), [custom sidebars](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars), [table of contents](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#table-of-contents), [galleries](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery), related posts, [breadcrumb links](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta), [navigation lists](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#navigation-list), and more.
+- Commenting support (powered by [Disqus](https://disqus.com/), [Facebook](https://developers.facebook.com/docs/plugins/comments), Google+, [Discourse](https://www.discourse.org/), static-based via [Staticman](https://staticman.net/), and custom).
+- [Google Analytics](https://www.google.com/analytics/) support.
+- UI localized text in English (default), Brazilian Portuguese, Chinese, French, German, Italian, Korean, Nepali (Nepalese), Russian, Spanish, and Turkish
+
+## Demo Pages
+
+| Name                                        | Description                                           |
+| ------------------------------------------- | ----------------------------------------------------- |
+| [Post with Header Image][header-image-post] | A post with a large header image. |
+| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
+| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
+| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
+| [Sample Collection Page][sample-collection] | Single page from a collection. |
+| [Categories Archive][categories-archive] | Posts grouped by category. |
+| [Tags Archive][tags-archive] | Posts grouped by tags. |
+
+Additional sample posts are available under [posts archive][year-archive] on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs).
+
+[header-image-post]: https://mmistakes.github.io/minimal-mistakes/layout-header-image-text-readability/
+[gallery-post]: https://mmistakes.github.io/minimal-mistakes/post%20formats/post-gallery/
+[html-tags-post]: https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/
+[syntax-post]: https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting/
+[sample-collection]: https://mmistakes.github.io/minimal-mistakes/recipes/chocolate-chip-cookies/
+[categories-archive]: https://mmistakes.github.io/minimal-mistakes/categories/
+[tags-archive]: https://mmistakes.github.io/minimal-mistakes/tags/
+[year-archive]: https://mmistakes.github.io/minimal-mistakes/year-archive/
+
+## Usage
+
+For detailed instructions on how to configure, customize, add content, and more read the [theme's documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
+
+**Note:** Gem version of the theme requires Jekyll v3.3+ and is not currently supported on [GitHub Pages](https://pages.github.com/). You can still use the theme with GitHub Pages, you'll just need to install using the old "[repo fork method](https://mmistakes.github.io/minimal-mistakes/docs/installation/)".
+
+## Quick Start
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "minimal-mistakes-jekyll"
+```
+
+Add this line to your Jekyll site's `_config.yml` file:
+
+```yaml
+theme: minimal-mistakes-jekyll
+```
+
+Then run Bundler to install the theme gem and dependencies:
+
+```bash
+bundle install
+```
+
+To update the theme run `bundle update`.
 
 ---
 
-![Theme preview](http://gayan.me/thumbnails/gaya-jekyll-theme-preview-590x300.png "Gaya jekyll theme")
+## Contributing
 
-### Need Help?
+Having trouble working with the theme? Found a typo in the documentation? Interested in adding a feature or [fixing a bug](https://github.com/mmistakes/minimal-mistakes/issues)? Then by all means [submit an issue](https://github.com/mmistakes/minimal-mistakes/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
 
-Please submit as an 
-[issue](https://github.com/web-create/harmony/issues/new), I am happy 
-to response back.
+Minimal Mistakes has been designed as a base for you to customize and fit your site's unique needs. Please keep this in mind when requesting features and/or submitting pull requests. If it's not something that most people will use, I probably won't consider it. When in doubt ask. 
 
-## How to install/run
+This goes for author sidebar links and "share button" additions -- I have no intention of merging in every possibly option, the essentials are there to get you started :smile:.
 
-1. [Fork](https://github.com/gayanvirajith/gaya) this repository.
-2. Clone it: git clone https://github.com/YOUR-USERNAME/gaya.
-3. If you completely new to jekyll, please read more about [Jekyll](http://jekyllrb.com/) and [Github pages](https://help.github.com/articles/using-jekyll-with-pages).
-4. Change your directory into cloned repository. 
-5. Run `bundle install`
-6. Edit the _config.yml on root directory. Change `url` property to to 
-`http://127.0.0.1:4000` since you are going to run on localhost.
-7. Run the jekyll server by having: `bundle exec jekyll serve --baseurl ''` or `rake preview`   
+### Pull Requests
 
-Try to locate your browser at [http://localhost:4000](http://localhost:4000).
+When submitting a pull request:
 
-Note: If you are a windows user please refer this nice website - http://jekyll-windows.juthilo.com/ by Julian Thilo to configure ruby + jekyll on windows.
+1. Clone the repo.
+2. Create a branch off of `master` and give it a meaningful name (e.g. `my-awesome-new-feature`) and describe the feature or fix.
+3. Open a pull request on GitHub.
 
+Theme documentation and demo pages can be found in the [`/docs`](docs) if submitting improvements, typo corrections, etc.
 
-## Theme options and configurations
+## Development
 
-Following options can be seen within the file `_config.yml`. More information 
-about configuration can be found on the [Jekyll Documentationn][jekyll]
+To set up your environment to develop this theme, run `bundle install`.
 
-### General settings
+To test the theme, run `bundle exec rake preview` and open your browser at `http://localhost:4000/test/`. This starts a Jekyll server using content in the `test/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
 
-| Property name | Description  |
------------- | -------------
-`title` | The title of your blog shown in the site header along with the logo.
-`tagline` | The site tagline also shown in the site header along with the title.
-`email` | The email address associated with blog/site.
-`description` | The site description used to show author's/site's description in the top of the sidebar.
-`baseurl` | The subpath of your site, e.g. /blog/. More information can be found in the [Jekyll Documentationn][jekyll].
-`url` | The base host name & protocol for your site. More information can be found in the [Jekyll Documentationn][jekyll].
-`logourl` | Path to main logo image.
-`author_thumbnail` | Path to author's thumbnail image. 
-`author` | Name of the author.
-`paginate` | Number of posts to show per page, More information can be found in the [Jekyll Documentationn][jekyll].
+---
 
-### Social profile links
+## Credits
 
-| Property name | Description  |
------------- | -------------
-`github` | GitHub link (Leave empty to exclude)
-`twitter` | Twitter link (Leave empty to exclude)
-`facebook` | Facebook link (Leave empty to exclude)
-`gplus` | Google plus link (Leave empty to exclude)
-`dribble` | Dribble link (Leave empty to exclude)
-`pinterest` | Pinterest link (Leave empty to exclude)
+### Creator
 
-### Theme settings
+**Michael Rose**
 
-| Property name | Description  |
------------- | -------------
-`highlight_color` | The main highlight/theme color of the site. You can put any color as a hex color. The configured color will be applied to sidebar, anchor links, buttons etc.
-`show_share_buttons` | Set as True/False to enable or disable Post share option.
-`show_author_info` | Set as True/False to enable or disable the author information on a post.
-`disqus_shortname` | Disqus Short name for Disqus comments. Leave empty to disable comments.
-`google_analytics_key` | Enter your Google analytics tracking ID to enable analytic support.
-`google_webmaster_key` | Enter your Google web-master verification key to verify your site with the web-master tool. (This is an alternative way of verifying your site with the web-master tool, the general way is to upload a file to your server.)
+- <https://mademistakes.com>
+- <https://twitter.com/mmistakes>
+- <https://github.com/mmistakes>
 
+### Icons + Demo Images:
 
-### Page level configurations
+- [The Noun Project](https://thenounproject.com) -- Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+- [Unsplash](https://unsplash.com/)
 
-These configurations can be found within the top section of the each page, see the a post under `_posts` directory for example. 
+### Other:
 
-| Property name | Description  |
------------- | -------------
-`banner_image` | Specify the image name eg: `sample-banner-image-1.jpg` for banner image for the post. Jekyll system tries to locate the image under `assets/images`. So make sure you place all banner images under assets/images.
-`banner_video` | If you want to embed `Youtube/Vimeo` Video or `SoundCloud` audio, Specify the resource within single quotes. Please have a look on example post in `_posts/2014-12-14-what-is-nodejs.md` to see how we embed YouTube video. 
-`comments` | Set as True/False, if false will disable comments for current page/post.
-`browser_title` | SEO property.  Use this property if you want to display different browser title other than default page title. Please have a look on example post under `_posts/2014-12-14-what-is-nodejs.md` to see how we used the property.
-`meta_description` | SEO property. Use this property If you want to have unique meta description for each post. See the example post on `_posts/2014-12-14-what-is-nodejs.md` to see how we used the property.
+- [Jekyll](http://jekyllrb.com/)
+- [jQuery](http://jquery.com/)
+- [Susy](http://susy.oddbird.net/)
+- [Breakpoint](http://breakpoint-sass.com/)
+- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+- [FitVids.JS](http://fitvidsjs.com/)
+- Greedy Navigation - [lukejacksonn](http://codepen.io/lukejacksonn/pen/PwmwWV)
+- [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll)
 
-### Sidebar navigation configurations
-
-As jekyll supports data files, **Gaya** theme uses `YAML` [data file][df] to load sidebar navigation items. You could find the `main-nav.yaml` data file under `_data/` directory. You could add any number of menu items by modifying `main-nav.yaml`. 
-
-An example of `main-nav.yaml`:
-
-```
-- title: "About me" # Title/Caption of the menu item
-  href: "/about" # the page where it pointed
-- title: "Blog Archive"
-  href: "/archive"
-```
-
-At some point you want to link an external URL, in that case you could edit the `_includes/sidebar.html` file. See the following example:
-
-```
-<nav class="sidebar-nav">
-   <a class="sidebar-nav-item" 
-      href="http://www.example.com"
-      target="_blank">
-      Example site
-    </a>
-</nav>
-```
+---
 
 ## License
 
-(The MIT License)
+The MIT License (MIT)
 
-Copyright (c) 2014 Gayan Virajith
+Copyright (c) 2017 Michael Rose
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[jekyll]: http://jekyllrb.com
-[df]: http://jekyllrb.com/docs/datafiles/
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
