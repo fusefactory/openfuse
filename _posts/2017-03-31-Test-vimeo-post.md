@@ -1,7 +1,15 @@
 ---
-published:    true
-author:       Luca Camellini
-tags:         [test,dokk,interactive]
+published: true
+author: Luca Camellini
+tags:
+  - test
+  - dokk
+  - interactive
+title: 'Post: Modified Date'
+last_modified_at: 2016-03-09T21:20:02.000Z
+categories:
+  - R&D
+  - Laboratory
 ---
 fuse* creates post with video..
 
