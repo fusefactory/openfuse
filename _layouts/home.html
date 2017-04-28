@@ -1,13 +1,13 @@
 ---
 layout: archive
 ---
-{% if page.url != "/" and site.breadcrumbs %}
+{% if site.breadcrumbs %}
   {% unless paginator %}
     {% include breadcrumbs.html %}
   {% endunless %}
 {% endif %}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "fuse* recent posts:" }}</h3>
 
 {% for post in paginator.posts %}
   {% include archive-single.html %}
