@@ -78,7 +78,7 @@ analytics:
 # Site Author
 author:
   name             : "fuse*"
-  avatar           : "/image/fuse_logo_solo_black.png"
+  avatar           : "/images/fuse_logo_solo_black.png"
   bio              : "Sharing knowledge blog."
   location         : "Campogalliano, Italy"
   email            :
