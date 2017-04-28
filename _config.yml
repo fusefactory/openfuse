@@ -32,3 +32,5 @@ gems:
   - jekyll-gist
 
 theme: jekyll-theme-minimal
+
+plugins:            video-embed.rd
