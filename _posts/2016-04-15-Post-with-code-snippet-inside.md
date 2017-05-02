@@ -1,7 +1,10 @@
 ---
-published:    true
-author:       Luca Camellini
-tags:         [test,dokk,interactive]
+published: true
+author: Luca Camellini
+tags:
+  - test
+  - dokk
+  - interactive
 ---
 Code inside the post...
 
@@ -47,3 +50,6 @@ void main() {
     vColor = vec4(0.95,0.0,0.0,0.05);
 }
 ```
+
+![Screen Shot 2017-04-07 at 11.54.59.png]({{site.baseurl}}/images/Screen Shot 2017-04-07 at 11.54.59.png)
+
