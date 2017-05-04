@@ -13,9 +13,11 @@ $paragraph-indent           : false !default; // true, false (default)
 $indent-var                 : 1.3em !default;
 
 /* system typefaces */
-$serif                      : Georgia, Times, serif !default;
+$serif                      : "PT Serif", Georgia, Times, serif;
 $sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace !default;
+$sans-serif-narrow          : "PT Sans Narrow", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+
 
 /* sans serif typefaces */
 $sans-serif-narrow          : $sans-serif !default;
@@ -29,7 +31,7 @@ $calisto                    : "Calisto MT", serif !default;
 $garamond                   : Garamond, serif !default;
 
 $global-font-family         : $sans-serif !default;
-$header-font-family         : $sans-serif !default;
+$header-font-family         : $sans-serif-narrow;
 $caption-font-family        : $serif !default;
 
 /* type scale */
