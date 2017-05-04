@@ -6,6 +6,8 @@ tags:
   - dokk
   - interactive
 ---
+{% include video id="216027647" provider="vimeo" %}
+
 Code inside the post...
 
 ```
