@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Openframeworks:-Good-quality-screen-capure'
+title: 'OF:-good-quality-screen-capure'
 ---
 Looking among many (almost all) alternatives in video capture systems to record openFrameworks video output, I finally found what is for me a good solution.
 
