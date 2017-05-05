@@ -10,7 +10,7 @@ author_profile: true
   {% assign posts = group_items[forloop.index0] %}
    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i>TAG: </strong>
     <span itemprop="keywords">
-      <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | absolute_url }}" class="page__taxonomy-item" rel="tag">{{ tag }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+      <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | absolute_url }}" class="page__taxonomy-item" rel="tag">{{ tag }}</a>
     </span>
   {% for post in posts %}
     {% include archive-single.html %}
