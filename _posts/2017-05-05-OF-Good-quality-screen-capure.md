@@ -20,7 +20,7 @@ If you haven't **homebrew** yet on your system just type this on Terminal:
 Now you can download [ofxVideoRecorder](https://github.com/timscaffidi/ofxVideoRecorder) and put it inside your OF addons folder. With OF projectGenerator add to your project.
 To record you screen capture as a movie you need to add this lines to some of your main project files.
 
-ofApp.h:
+**ofApp.h**
 ```
     ofxVideoRecorder    vidRecorder;
     bool 				bRecording = false;
@@ -29,7 +29,8 @@ ofApp.h:
     ofPixels 			recordPixels;
 ```
 
-ofApp.cp - inside setup()
+
+**ofApp.cpp** - inside setup()
 ```
     vidRecorder.setVideoCodec("prores");
     vidRecorder.setVideoBitrate("2000k");
@@ -37,7 +38,8 @@ ofApp.cp - inside setup()
     recordFboFlip.allocate(1920, 1080, GL_RGB);
 ```
 
-ofApp.cp - inside update()
+
+**ofApp.cpp** - inside update()
 ```
     recordFboFlip.getTexture().readToPixels(recordPixels);
     if(bRecording){
@@ -48,7 +50,8 @@ ofApp.cp - inside update()
     }
 ```
 
-ofApp.cpp - inside draw()
+
+**ofApp.cpp** - inside draw()
 ```
     recordFbo.begin();
     ofClear(0,0,0,255);
@@ -66,7 +69,8 @@ ofApp.cpp - inside draw()
     recordFboFlip.draw(0,0,1920,1080);
 ```
 
-ofApp.cpp - inside keyPressed(int key)
+
+**ofApp.cpp** - inside keyPressed(int key)
 ```
 	if(key=='R'){
         bRecording = !bRecording;
