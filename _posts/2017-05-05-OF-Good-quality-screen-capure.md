@@ -1,8 +1,6 @@
 ---
 published: true
 title: 'OF: good quality screen capure'
-tag: 'openframeworks, tools'
-category: coding
 author: Luca Camellini
 tags:
   - openframeworks
