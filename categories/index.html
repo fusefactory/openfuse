@@ -9,7 +9,10 @@ author_profile: true
 
 {% for category in group_names %}
   {% assign posts = group_items[forloop.index0] %}
-  <h2 id="{{ category | slugify }}" class="archive__subtitle">{{ site.data.ui-text[site.locale].categories_label | default: "Categorie:" }}{{ category }}</h2>
+  <i class="fa fa-fw fa-tags" aria-hidden="true"></i>TAG:
+    <span itemprop="keywords">
+      <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | absolute_url }}" class="page__taxonomy-item" rel="tag">{{ category }}</a>
+    </span> 
   {% for post in posts %}
     {% include archive-single.html %}
   {% endfor %}
