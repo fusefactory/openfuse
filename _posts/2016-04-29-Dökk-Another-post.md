@@ -23,3 +23,8 @@ To be continue..
 Our gif:
 
 ![particles-animated.gif]({{site.baseurl}}/images/test_gif_cut.gif)
+
+vs vimeo...
+
+{% include video id="216023820" provider="vimeo" %}
+
