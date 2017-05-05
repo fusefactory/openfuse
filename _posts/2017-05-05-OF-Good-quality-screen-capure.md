@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'OF: good quality screen capure'
+title: 'OF: good quality screen capture'
 author: Luca Camellini
 tags:
   - openframeworks
