@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-Looking among many (almost all) alternatives in video capture system to record openFrameworks video output, I finally found what is for me a Good solution.
+Looking among many (almost all) alternatives in video capture systems to record openFrameworks video output, I finally found what is for me a good solution.
 
 Thanks to [Timothy Scaffidi](https://github.com/timscaffidi) to implement ofxVideRecorder OF addons.
 
