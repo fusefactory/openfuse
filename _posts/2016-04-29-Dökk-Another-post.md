@@ -14,5 +14,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 ![neural_network_screenshot_green.jpg]({{site.baseurl}}/images/neural_network_screenshot_green.jpg)
 
+And a gif:
+
+![particles-animated.gif]({{site.baseurl}}/images/particles-animated.gif)
 
 To be continue..
