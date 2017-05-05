@@ -6,9 +6,9 @@ author_profile: true
 ---
 
 {% include group-by-array collection=site.posts field="tags" %}
-
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
+  -----
   <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i>TAG: {{ tag }}</strong>
   {% for post in posts %}
     {% include archive-single.html %}
