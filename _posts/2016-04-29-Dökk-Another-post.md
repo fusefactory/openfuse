@@ -19,3 +19,6 @@ And a gif:
 ![particles-animated.gif]({{site.baseurl}}/images/particles-animated.gif)
 
 To be continue..
+
+Our gif:
+![particles-animated.gif]({{site.baseurl}}/images/test_gif_cut.gif)
