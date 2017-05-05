@@ -9,7 +9,7 @@ author_profile: true
 
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
-  <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i>TAG: </strong> <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
+  <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i>TAG: {{ tag }}</strong>
   {% for post in posts %}
     {% include archive-single.html %}
   {% endfor %}
