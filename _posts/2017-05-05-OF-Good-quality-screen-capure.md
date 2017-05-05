@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Looking among many (almost all) alternatives in video capture system to record openFrameworks video output, I finally found what is for me a Good solution.
 
