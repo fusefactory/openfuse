@@ -1,1 +1,0 @@
-![]({{site.baseurl}}/images/aggregation_004.jpg)
