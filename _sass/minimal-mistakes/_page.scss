@@ -5,7 +5,7 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 2em;
+//  margin-top: 2em;
   padding-left: 1em;
   padding-right: 1em;
   -webkit-animation: intro 0.3s both;
@@ -37,7 +37,7 @@
 }
 
 .page__title {
-  margin-top: 0;
+  margin-top: 2em;
   line-height: 1;
 
   & + .page__meta {
