@@ -31,7 +31,7 @@
       {% endif %}
     </h2>
     {% if post.author %}
-     <p class="page__meta"><strong>Author: </strong> {{ post.author }}</p>
+     <p><strong>Author: </strong> {{ post.author }}</p>
     {% endif %}
     {% if post.last_modified_at %}
       <p class="page__meta"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ post.last_modified_at | date: "%Y-%m-%d" }}">{{ post.last_modified_at | date: "%B %d, %Y" }}</time></p>
