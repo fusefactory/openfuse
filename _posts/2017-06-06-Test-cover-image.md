@@ -1,9 +1,9 @@
 ---
 published: false
-img: >-
-  <img class="caption__media" data-interchange="[../asset/img/chickpea-small.jpg
-  (small)], [../asset/img/chickpea-medium.jpg, (medium)],
-  [../asset/img/chickpea-large.jpg, (large)]">
+img:
+  small: chickpea-small.jpg
+  medium: chickpea-medium.jpg
+  large: chickpea-large.jpg
 ---
 Test cover image post with metadata..
 
