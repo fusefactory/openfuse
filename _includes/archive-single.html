@@ -24,9 +24,10 @@
       </div>
     {% endif %}    
     
-   
-    <img src="https://fusefactory.github.io/openfuse/images/ljos.png" class="author__avatar" alt="fuse* sharing knowledge blog." itemprop="image" />
-    
+    {% if page.img %}
+    <img src="https://fusefactory.github.io/openfuse/images/ljos.png" class="author__avatar" alt="fuse* sharing knowledge blog." itemprop="image" />   
+    {% endif %}    
+
     
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
