@@ -25,12 +25,7 @@
     {% endif %}    
     
     {% if page.img %}
-  <img class="caption__media" data-interchange="
-  {% for img in page.img %}
-    [{{site.baseurl}}/images_posts/{{img[1]}} ({{img[0]}})]
-    {% unless forloop.last %}, {% endunless %}
-  {% endfor %}
-  ">
+<img src="https://fusefactory.github.io/openfuse/images/fuse_logo_solo_black.png" class="author__avatar" alt="fuse* sharing knowledge blog." itemprop="image">
     {% endif %}
     
     <h2 class="archive__item-title" itemprop="headline">
