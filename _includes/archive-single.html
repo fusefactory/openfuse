@@ -28,11 +28,6 @@
       </div>
     {% endif %}    
     
-    {% if post.img %}
-    <img src="{{img}}" class="author__avatar" alt="" itemprop="image" />   
-    {% endif %}    
-
-    
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | absolute_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
@@ -52,6 +47,9 @@
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     <br />
+    {% if post.img %}
+      <img src="{{img}}" class="author__avatar" alt="" itemprop="image" />   
+    {% endif %}    
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 500 }}</p>{% endif %}
   </article>
   <br />
