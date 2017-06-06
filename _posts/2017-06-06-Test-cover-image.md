@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 img: images_posts/Screen Shot 2017-06-06 at 09.24.42.png
 ---
 Test cover image post with metadata..
