@@ -7,7 +7,10 @@ tags:
   - tools
 categories:
   - coding
+img: images_posts/of_capture.png
 ---
+![of_capture.png]({{site.baseurl}}/images_posts/of_capture.png)
+
 Looking among many (almost all) alternatives in video capture systems to record openFrameworks video output, I finally found what is for me a good solution.
 
 Thanks to [Timothy Scaffidi](https://github.com/timscaffidi) to implement ofxVideRecorder OF addons.
