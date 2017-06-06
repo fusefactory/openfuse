@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 img:
   small: chickpea-small.jpg
   medium: chickpea-medium.jpg
