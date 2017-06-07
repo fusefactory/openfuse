@@ -30,6 +30,11 @@ If you haven't **homebrew** yet on your system just type this on Terminal:
 Now you can download [ofxVideoRecorder](https://github.com/timscaffidi/ofxVideoRecorder) and put it inside your OF addons folder. With OF projectGenerator add it to your project.
 To record you screen capture as a movie you need to add this lines to some of your main project files.
 
+**ofApp.h (include)**
+```
+#include "ofxVideoRecorder.h"
+```
+
 **ofApp.h**
 ```
     ofxVideoRecorder    vidRecorder;
