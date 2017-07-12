@@ -15,7 +15,7 @@ img: images_posts/2017-07-12-florim-vr.png
 # VR development: Cinder VS Aframe
 
 ## Florim Cinder Demo
-* bitbucket: https://bitbucket.org/fuseinteractive/florimvrdemo
+* bitbucket: [https://bitbucket.org/fuseinteractive/florimvrdemo](https://bitbucket.org/fuseinteractive/florimvrdemo)
 * git: [git@bitbucket.org:fuseinteractive/florimvrdemo.git](git@bitbucket.org:fuseinteractive/florimvrdemo.git)
 
 ### Uses
@@ -127,7 +127,7 @@ void CinderApp::draw() {
 }
 ```
 
-Note that when VR_ENABLED == true, it will _try_ to render to the VR HMD (Head Mounted Display), but if there is not HMD available, it will fall back to rendering "normally", the same way is when VR_ENABLED == false.
+Note that when VR_ENABLED == true, it will _try_ to render to the VR HMD (Head Mounted Display), but if there is no HMD available, it will fall back to rendering "normally", the same way is when VR_ENABLED == false.
 
 
 
@@ -156,9 +156,9 @@ ___
 
 
 ## Aframe test
-* github: https://github.com/fusefactory/Aframe-WebVR-test
+* github: [https://github.com/fusefactory/Aframe-WebVR-test](https://github.com/fusefactory/Aframe-WebVR-test)
 * git: [git@github.com:fusefactory/Aframe-WebVR-test.git](git@github.com:fusefactory/Aframe-WebVR-test.git)
-* live demo: https://fusefactory.github.io/Aframe-WebVR-test/
+* live demo: [https://fusefactory.github.io/Aframe-WebVR-test](https://fusefactory.github.io/Aframe-WebVR-test/)
 
 ### Uses
 * [Aframe](https://aframe.io/) - _Mozilla's WebVR framework_ ([github](https://github.com/aframevr/aframe))
@@ -183,7 +183,7 @@ This already gave me the 3D robot arms. (I will need to do a bit more to actuall
 Aframe is _great_ for quickly throwing a little scene together to try something and seems a good tool for fast-prototyping. You don't have to think about low-level technical stuff like texture-loading (you simply add an <img> tag) and it has a pretty sophisticated animation system for building for example transitions. I still have to see how Aframe holds up when you want to start building more complicated applications...
 
 ### Multi Platform
-In my experience so far, Aframe works -and performs- pretty good on both desktop and mobile browsers, so you can easily develop and try it out in google cardboard/daydream. WebVR is a standard that's still under development, but there are already some browsers with (beta) support for Oculus Rift and HTC Vive (see https://webvr.info/ for up-to-date information on the status of the different platforms). This means that with the right browser (and settings) you should be able to also run an aframe application inside a VR headset, but I haven't tried it yet.
+In my experience so far, Aframe works -and performs- pretty good on both desktop and mobile browsers, so you can easily develop and try it out in google cardboard/daydream. WebVR is a standard that's still under development, but there are already some browsers with (beta) support for Oculus Rift and HTC Vive (see [https://webvr.info/](https://webvr.info/) for up-to-date information on the status of the different platforms). This means that with the right browser (and settings) you should be able to also run an aframe application inside a VR headset, but I haven't tried it yet.
 
 Another awesome "feature" of WebVR is that you can simply upload your app to a website or -for example- github page and everybody can try it on their computer/phone/VR-headset, which is great for sharing updates easily between team-members and with clients.
 
