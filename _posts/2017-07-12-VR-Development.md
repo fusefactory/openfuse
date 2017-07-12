@@ -12,8 +12,6 @@ categories:
 img: images_posts/2017-07-12-florim-vr.png
 ---
 
-# VR development: Cinder VS Aframe
-
 ## Florim Cinder Demo
 * bitbucket: [https://bitbucket.org/fuseinteractive/florimvrdemo](https://bitbucket.org/fuseinteractive/florimvrdemo)
 * git: [git@bitbucket.org:fuseinteractive/florimvrdemo.git](git@bitbucket.org:fuseinteractive/florimvrdemo.git)
