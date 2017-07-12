@@ -1,4 +1,16 @@
-
+---
+published: true
+title: 'VR Development: Cinder-VR VS Aframe'
+author: Mark
+tags:
+  - vr
+  - cinder
+  - webvr
+  - aframe
+categories:
+  - coding
+img: images_posts/2017-07-12-florim-vr.png
+---
 
 # VR development: Cinder VS Aframe
 
