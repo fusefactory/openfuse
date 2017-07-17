@@ -9,7 +9,7 @@ tags:
   - aframe
 categories:
   - coding
-img: images_posts/2017-07-12-florim-vr.png
+img: images_posts/2017-07-12-florim-vr.gif
 ---
 
 ## Florim Cinder Demo
