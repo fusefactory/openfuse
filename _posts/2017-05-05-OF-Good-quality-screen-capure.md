@@ -9,7 +9,7 @@ categories:
   - coding
 img: images_posts/of_capture.png
 ---
-![of_capture.png]({{site.baseurl}}/images_posts/of_capture.png)
+{% include video id="216023820" provider="vimeo" %}
 
 Looking among many (almost all) alternatives in video capture systems to record openFrameworks video output, I finally found what is for me a good solution.
 
