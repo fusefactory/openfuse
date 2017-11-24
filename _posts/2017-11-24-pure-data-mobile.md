@@ -60,10 +60,6 @@ git submodule update --recursive
 ```
 
 ### c) Xcode project
-Create an Xcode project
-```
-Xcode > File > New project > Single View App
-```
 
 Add subproject libpd.xcodeproj, located in pd-for-ios folder, to current project (drag and drop).
 Build libpd-ios choosing “libpd-ios” in target and build.
@@ -78,14 +74,42 @@ In TARGETS, Build Settings, Header Search Path add:
 ../pd-for-ios/libpd/objc/
 ```
 
-INSERIRE GIF
+> INSERIRE GIF
 
-**If you use Xcode 9 check [this](https://github.com/libpd/pd-for-ios/issues/19) current bug.**
+!!! **If you use Xcode 9 check [this](https://github.com/libpd/pd-for-ios/issues/19) current bug.** !!!
 
-Create a new group _PureData_ and copy inside _test-iOS.pd_.
+Create a new group "PureData" and copy inside "test-iOS.pd"
+
+**AppDelegate.h**
+```Objective-C
+
+#import "PdAudioController.h"
+@property (strong, nonatomic) PdAudioController *pdAudioController;
+```
+
+**AppDelegate.m**
+
+```Objective-C
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.pdAudioController = [[PdAudioController alloc] init];
+    PdAudioStatus pdInit = [self.pdAudioController configureAmbientWithSampleRate:44100 numberChannels:2 mixingEnabled:YES];
+    
+    if (pdInit != PdAudioOK){
+        NSLog(@"Pd failed to initialize");
+    }
+    return YES;
+}
+
+```
+- (void)applicationDidBecomeActive:(UIApplication *)application 
+```Objective-C
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    self.pdAudioController.active = YES;
+}```
+
 
 The goal is active our pd sound using a iOS switch button. To di this we
-have to create a UISwitch in storyboard and connect _Value Changed_ to method _onSwitchChange_ in _ViewController.m_.
+have to create a UISwitch in storyboard and connect "Value Changed" to method "onSwitchChange" in "ViewController.m".
 
 We create a simple PDPatch class. It implements the file loader and the communication with pd.
 
@@ -149,5 +173,8 @@ Create the IBAction method:
         [self.pdPatch onOff: [sender isOn]];
 }
 ```
+
+
+Xcode project is downloadable [here](https://github.com/fusefactory/openfuse/blob/master/zip_posts/Example-PureData.zip). 
 
 
