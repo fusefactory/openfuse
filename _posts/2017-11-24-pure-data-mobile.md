@@ -22,7 +22,7 @@ The communication from mobile **mobile apps** and **pure data**  use libpd messa
 Now we create a simple PD patch and a Xcode project to show how integrate [pd-for-ios](https://github.com/libpd/pd-for-ios).
 
 ### a) Pure Data patch .pd
-This is a sample Pure Data patch. It generate a 440Hz sin wave when "s onOff" is active
+This is a sample Pure Data patch. It generate a 440Hz sin wave when "s onOff" is active.
 
 ```c
 #N canvas 452 527 450 300 10;
@@ -42,6 +42,112 @@ This is a sample Pure Data patch. It generate a 440Hz sin wave when "s onOff" is
 #X connect 6 0 1 1;
 ```
 
-![pure_data1.png]({{site.baseurl}}/images_posts/pure_data1.png)
+![pure_data2.png]({{site.baseurl}}/images_posts/pure_data2.png)
+
+### b) Retrive pd-for-ios
+First donwload GitHub repo from https://github.com/libpd/pd-for-ios.  From terminal:
+
+```Bash
+git clone https://github.com/libpd/pd-for-ios
+cd pd-for-ios/
+git submodule init
+git submodule update --init --recursive
+```
+These two commands install the dependencies from libpd.
+```Bash
+git pull
+git submodule update --recursive
+```
+
+### c) Xcode project
+Create an Xcode project
+```
+Xcode > File > New project > Single View App
+```
+
+Add subproject libpd.xcodeproj, located in pd-for-ios folder, to current project (drag and drop).
+Build libpd-ios choosing “libpd-ios” in target and build.
+
+In main project go to TARGETS > Linked Frameworks and Libraries > add:
+- libpd-ios.a
+- AudioToolbox.framework
+- AVFoundation.framework
+
+In TARGETS, Build Settings, Header Search Path add:
+```
+../pd-for-ios/libpd/objc/
+```
+
+INSERIRE GIF
+
+**If you use Xcode 9 check [this](https://github.com/libpd/pd-for-ios/issues/19) current bug.**
+
+Create a new group _PureData_ and copy inside _test-iOS.pd_.
+
+The goal is active our pd sound using a iOS switch button. To di this we
+have to create a UISwitch in storyboard and connect _Value Changed_ to method _onSwitchChange_ in _ViewController.m_.
+
+We create a simple PDPatch class. It implements the file loader and the communication with pd.
+
+**PDPatch.h**
+```Objective-C
+#import <Foundation/Foundation.h>
+#import "PdDispatcher.h"
+
+@interface PDPatch : NSObject
+
+- (instancetype) initWithFile:(NSString *) pdFile;
+- (void) onOff:(BOOL) yesNo;
+
+@end
+```
+
+**PDPatch.m**
+```Objective-C
+#import "PDPatch.h"
+
+@implementation PDPatch
+
+- (instancetype) initWithFile:(NSString *)pdFile{
+    self = [super init];
+    if (self){
+        void * patch = [PdBase openFile:pdFile path:[NSBundle mainBundle].resourcePath];
+        if (! patch){
+            NSLog(@"Failed to load patch %@", pdFile);
+        }
+    }
+    
+    return self;
+}
+
+- (void) onOff:(BOOL) yesNo{
+    float yn = (float)yesNo;
+    [PdBase sendFloat:yn toReceiver:@"onOff"];
+}
+
+@end
+
+```
+
+**MainViewController.h** 
+
+Include PDPatch.h and create a PDPatch property:
+```Objective-C
+#import "PDPatch.h"
+@property PDPatch *pdPatch;
+```
+
+**MainViewController.m** 
+
+Load pdPatch:
+```Objective-C
+self.pdPatch = [[PDPatch alloc] initWithFile:@"test-iOS.pd"];
+```
+Create the IBAction method:
+```Objective-C
+- (IBAction)onSwitchChange:(id)sender {
+        [self.pdPatch onOff: [sender isOn]];
+}
+```
 
 
