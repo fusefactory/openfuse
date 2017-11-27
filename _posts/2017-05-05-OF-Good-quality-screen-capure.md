@@ -109,4 +109,6 @@ To record you screen capture as a movie you need to add this lines to some of yo
     }
 ```
 
+Please change the file path to avoid errors.
+
 That's all. You can now run your project and start recording pressing 'R' on your keyboard. With 'C' you stop and save the recording.
