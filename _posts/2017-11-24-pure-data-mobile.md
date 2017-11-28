@@ -5,23 +5,24 @@ published: false
 
 **Pure Data** (or just Pd) is an open source visual programming language for multimedia.
 
-The easiest way to implement generative audio inside mobile app is using [Pure Data](https://puredata.info/). Pure data for mobile is available for [iOS](https://github.com/libpd/pd-for-ios) and for [Android](https://github.com/libpd/pd-for-android). The interesting thing is that you can use the same Pure Data files (.pd) for all platform: **Windows**, **Mac OS**, **iOS** and **Android**.
+A simple way to implement generative audio inside mobile app is using [Pure Data](https://puredata.info/). Pure data for mobile is available for [iOS](https://github.com/libpd/pd-for-ios) and for [Android](https://github.com/libpd/pd-for-android). The interesting thing is that you can use the same Pure Data files (.pd) for all platform: **Windows**, **Mac OS**, **iOS** and **Android**.
 
 
-The communication from mobile **mobile apps** and **pure data**  use libpd messages integrated in the framework.
+The communication from mobile **mobile apps** and **pure data**  uses libpd messages integrated in the framework.
 
-**Pros**:
+**Pros**
 - use same .pd patch for all OS
 - simple communication using libpd messages
 - opensource
 
-**Cons**:
+**Cons**
 - it is compatible only with .wav files (it can’t play .mp3, .acc etc)
+- slow to create complex pd patch
 
 
 Now we create a simple PD patch and a Xcode project to show how integrate [pd-for-ios](https://github.com/libpd/pd-for-ios).
 
-### a) Pure Data patch .pd
+### Pure Data patch .pd
 This is a sample Pure Data patch. It generate a 440Hz sin wave when "s onOff" is active.
 
 ```c
@@ -44,8 +45,8 @@ This is a sample Pure Data patch. It generate a 440Hz sin wave when "s onOff" is
 
 ![pure_data2.png]({{site.baseurl}}/images_posts/pure_data2.png)
 
-### b) Retrive pd-for-ios
-First donwload GitHub repo from https://github.com/libpd/pd-for-ios.  From terminal:
+### Retrive pd-for-ios
+First clone [GitHub repo](https://github.com/libpd/pd-for-ios).  From terminal:
 
 ```Bash
 git clone https://github.com/libpd/pd-for-ios
@@ -59,7 +60,7 @@ git pull
 git submodule update --recursive
 ```
 
-### c) Xcode project
+### Xcode project
 
 Add subproject libpd.xcodeproj, located in pd-for-ios folder, to current project (drag and drop).
 Build libpd-ios choosing “libpd-ios” in target and build.
@@ -74,13 +75,17 @@ In TARGETS, Build Settings, Header Search Path add:
 ../pd-for-ios/libpd/objc/
 ```
 
-> INSERIRE GIF
+![XcodeProjectGif]({{site.baseurl}}/images_posts/pure-data.gif)
+
 
 !!! **If you use Xcode 9 check [this](https://github.com/libpd/pd-for-ios/issues/19) current bug.** !!!
 
-Create a new group "PureData" and copy inside "test-iOS.pd"
+Create a new group "PureData" and copy "test-iOS.pd"
 
 **AppDelegate.h**
+
+Import PdAudioController library and create a PdAudioController property.
+
 ```Objective-C
 
 #import "PdAudioController.h"
@@ -88,6 +93,8 @@ Create a new group "PureData" and copy inside "test-iOS.pd"
 ```
 
 **AppDelegate.m**
+
+Allocate PdAudioController property, configure pd ambient and set active PdAudioController when application become active.
 
 ```Objective-C
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -100,16 +107,14 @@ Create a new group "PureData" and copy inside "test-iOS.pd"
     return YES;
 }
 
-```
-- (void)applicationDidBecomeActive:(UIApplication *)application 
-```Objective-C
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     self.pdAudioController.active = YES;
-}```
+}
+```
 
 
-The goal is active our pd sound using a iOS switch button. To di this we
-have to create a UISwitch in storyboard and connect "Value Changed" to method "onSwitchChange" in "ViewController.m".
+The goal is to active our pd sound using a iOS switch button.
+Create a UISwitch in storyboard (or in your xib) and connect "Value Changed" to method "onSwitchChange" in you viewController (ex. ViewController.m).
 
 We create a simple PDPatch class. It implements the file loader and the communication with pd.
 
@@ -155,7 +160,7 @@ We create a simple PDPatch class. It implements the file loader and the communic
 
 **MainViewController.h** 
 
-Include PDPatch.h and create a PDPatch property:
+Include PDPatch.h and create a PDPatch property.
 ```Objective-C
 #import "PDPatch.h"
 @property PDPatch *pdPatch;
@@ -163,7 +168,7 @@ Include PDPatch.h and create a PDPatch property:
 
 **MainViewController.m** 
 
-Load pdPatch:
+Load PDPatch.
 ```Objective-C
 self.pdPatch = [[PDPatch alloc] initWithFile:@"test-iOS.pd"];
 ```
@@ -175,6 +180,4 @@ Create the IBAction method:
 ```
 
 
-Xcode project is downloadable [here](https://github.com/fusefactory/openfuse/blob/master/zip_posts/Example-PureData.zip). 
-
-
+Xcode project is downloadable [here](https://github.com/fusefactory/openfuse/blob/master/zip_posts/Example-PureData.zip).
