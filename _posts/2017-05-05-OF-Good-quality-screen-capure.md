@@ -45,12 +45,12 @@ To record you screen capture as a movie you need to add this lines to some of yo
 ```
 
 
-**ofApp.cpp** - inside setup()
+**ofApp.cpp** - inside setup()  (check if the resolution of your capture is ofGetWidth() and ofGetHeight().
 ```
     vidRecorder.setVideoCodec("prores");
     vidRecorder.setVideoBitrate("2000k");
-    recordFbo.allocate(1920, 1080, GL_RGB);
-    recordFboFlip.allocate(1920, 1080, GL_RGB);
+    recordFbo.allocate(ofGetWidth(), ofGetHeight(), GL_RGB);
+    recordFboFlip.allocate(ofGetWidth(), ofGetHeight(), GL_RGB);
 ```
 
 
@@ -77,11 +77,11 @@ To record you screen capture as a movie you need to add this lines to some of yo
     
     //the following 3 rows need to vertical flip of the fbo.. wout you record (and show on screen) your output upside down
     recordFboFlip.begin();
-    recordFbo.draw(0,1080,1920,-1080);
+    recordFbo.draw(0,recordFbo.getHeight(),recordFbo.getWidth(),-recordFbo.getHeight());
     recordFboFlip.end();
     
     //need if you want to visualize your output on the screen
-    recordFboFlip.draw(0,0,1920,1080);
+    recordFboFlip.draw(0,0,recordFbo.getWidth(),recordFbo.getHeight());
 ```
 
 
@@ -91,7 +91,7 @@ To record you screen capture as a movie you need to add this lines to some of yo
         bRecording = !bRecording;
         if(bRecording && !vidRecorder.isInitialized()) {
         // insert your path in the following row and your settings 1920x1080 60fps - the last 2 parms are zero because in my case I don't want to record audio..
- vidRecorder.setup("/Users/YourName/Desktop/video_recording/grab_"+ofGetTimestampString()+".mov", 1920, 1080, 60, 0, 0);
+ vidRecorder.setup("/Users/YourName/Desktop/video_recording/grab_"+ofGetTimestampString()+".mov", recordFbo.getWidth(),recordFbo.getHeight(), 60, 0, 0);
                        
             // Start recording
             vidRecorder.start();
