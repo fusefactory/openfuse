@@ -11,8 +11,6 @@ categories:
   - Mobile app
 title: Pure Data in Mobile apps (iOS - Android)
 ---
-## Pure Data in Mobile apps (iOS - Android)
-
 **Pure Data** (or just Pd) is an open source visual programming language for multimedia.
 
 A simple way to implement generative audio inside mobile app is using [Pure Data](https://puredata.info/). Pure data for mobile is available for [iOS](https://github.com/libpd/pd-for-ios) and for [Android](https://github.com/libpd/pd-for-android). The interesting thing is that you can use the same Pure Data files (.pd) for all platform: **Windows**, **Mac OS**, **iOS** and **Android**.
