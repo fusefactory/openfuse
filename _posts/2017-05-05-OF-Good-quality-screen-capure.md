@@ -45,7 +45,7 @@ To record you screen capture as a movie you need to add this lines to some of yo
 ```
 
 
-**ofApp.cpp** - inside setup()  (check if the resolution of your capture is ofGetWidth() and ofGetHeight().
+**ofApp.cpp** - inside setup()  (check if the resolution of your capture is ofGetWidth() and ofGetHeight())
 ```
     vidRecorder.setVideoCodec("prores");
     vidRecorder.setVideoBitrate("2000k");
