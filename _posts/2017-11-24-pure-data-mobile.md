@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## Pure Data in Mobile apps (iOS - Android)
 
