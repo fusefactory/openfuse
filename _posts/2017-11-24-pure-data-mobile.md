@@ -1,5 +1,14 @@
 ---
 published: true
+author: Matteo Mestucci
+tags:
+  - Pure Data
+  - iOS
+  - Xcode
+categories:
+  - Procedural sound
+  - Tutorial
+  - Mobile app
 ---
 ## Pure Data in Mobile apps (iOS - Android)
 
