@@ -9,6 +9,7 @@ categories:
   - Procedural sound
   - Tutorial
   - Mobile app
+title: Pure Data in Mobile apps (iOS - Android)
 ---
 ## Pure Data in Mobile apps (iOS - Android)
 
