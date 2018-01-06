@@ -8,6 +8,7 @@ tags:
 categories:
   - Strange Attractors
   - Particle system
+img: images_posts/Burke_Shaw_Attractor.jpg
 ---
 ![]({{site.baseurl}}/images_posts/Burke_Shaw_Attractor.jpg)
 <div style="text-align: right"> Burke-Shaw Attractor </div>
