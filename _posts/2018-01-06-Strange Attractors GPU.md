@@ -80,7 +80,7 @@ Down here a few more examples of attractors and their relative set of differenti
 
 ![]({{site.baseurl}}/images_posts/Aizawa_Attractor.png)
 
-### Attractor parameters###
+**Attractor parameters**
 ```
 float a = 0.95;
 float b = 0.7;
@@ -98,7 +98,7 @@ dz = (c + a*z - ((z*z*z) /3) - (x*x) + f * z * (x*x*x)) * timestep;
 
 ![]({{site.baseurl}}/images_posts/Arneodo_Attractor.png)
 
-### Attractor parameters###
+**Attractor parameters**
 ```
 float a = -5.5;
 float b = 3.5;
@@ -113,7 +113,7 @@ dz = (-a*x -b*y -z + (d* (pow(x, 3)))) * timestep;
 
 ![]({{site.baseurl}}/images_posts/Dadras_Attractor.png)
 
-### Attractor parameters###
+**Attractor parameters**
 ```
 float a = 3;
 float b = 2.7;
@@ -130,7 +130,7 @@ dz = (d*x*y - e*z) * timestep;
 
 ![]({{site.baseurl}}/images_posts/Dequan_Li_Attractor.png)
 
-### Attractor parameters###
+**Attractor parameters**
 ```
 float a = 40.0;
 float b = 1.833;
@@ -149,7 +149,7 @@ dz = (b*z + x*y - d*x*x) * timestep;
 
 ![]({{site.baseurl}}/images_posts/Lorenz_Attractor.png)
 
-### Attractor parameters###
+**Attractor parameters**
 ```
 float a = 10.0;
 float b = 28.0;
@@ -164,7 +164,7 @@ dz = (x*y - c*z) * timestep;
 
 ![]({{site.baseurl}}/images_posts/Lorenz_mod2_Attractor.png)
 
-### Attractor parameters###
+**Attractor parameters**
 ```
 float a = 0.9;
 float b = 5.0;
@@ -179,7 +179,8 @@ dz = (-z + x*(b*y +z))  * timestep;
 ##Thomas Attractor##
 
 ![]({{site.baseurl}}/images_posts/thomas_attractor.png)
-### Attractor parameters###
+
+**Attractor parameters**
 ```
 float b = 0.19;
 
@@ -192,7 +193,7 @@ dz = (-b*z + sin(x)) * timestep;
 
 ![]({{site.baseurl}}//images_posts/Three-Scroll_1_Attractor.png)
 
-### Attractor parameters###
+**Attractor parameters**
 ```
 float a = 40.0;
 float b = 0.833;
