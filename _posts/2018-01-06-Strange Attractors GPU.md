@@ -80,32 +80,90 @@ Down here a few more examples of attractors and their relative set of differenti
 
 ![]({{site.baseurl}}/images_posts/Aizawa_Attractor.png)
 
-
+### Attractor parameters###
+```
+float a = 0.95;
+float b = 0.7;
+float c = 0.6;
+float d = 3.5;
+float e = 0.25;
+float f = 0.1;
+        
+dx = ((z-b) * x - d*y) * timestep;
+dy = (d * x + (z-b) * y) *timestep;
+dz = (c + a*z - ((z*z*z) /3) - (x*x) + f * z * (x*x*x)) * timestep;
+```
 
 ##Arneodo Attractor##
 
 ![]({{site.baseurl}}/images_posts/Arneodo_Attractor.png)
 
+### Attractor parameters###
+```
+float a = -5.5;
+float b = 3.5;
+float d = -1;
+        
+dx = y * timestep;
+dy = z * timestep;
+dz = (-a*x -b*y -z + (d* (pow(x, 3)))) * timestep;
+```
 
 ##Dadras Attractor##
 
 ![]({{site.baseurl}}/images_posts/Dadras_Attractor.png)
 
+### Attractor parameters###
+```
+float a = 3;
+float b = 2.7;
+float c = 1.7;
+float d = 2;
+float e = 9;
+        
+dx = (y- a*x +b*y*z) * timestep;
+dy = (c*y -x*z +z) * timestep;
+dz = (d*x*y - e*z) * timestep;
+```
 
 ##Dequan Attractor##
 
 ![]({{site.baseurl}}/images_posts/Dequan_Li_Attractor.png)
 
+### Attractor parameters###
+```
+float a = 40.0;
+float b = 1.833;
+float c = 0.16;
+float d = 0.65;
+float e = 55.0;
+float f = 20.0;
+        
+dx = ( a*(y-x) + c*x*z) * timestep;
+dy = (e*x + f*y - x*z) * timestep;
+dz = (b*z + x*y - d*x*x) * timestep;
+```
 
 ##Lorenz Attractor##
 
 ![]({{site.baseurl}}/images_posts/Lorenz_Attractor.png)
 
+### Attractor parameters###
+```
+float a = 10.0;
+float b = 28.0;
+float c = 2.6666666667;
+        
+dx = (a * (y - x)) * timestep;
+dy = (x * (b-z) - y) * timestep;
+dz = (x*y - c*z) * timestep;
+```
 
 ##Lorenz Mod 2 Attractor##
 
 ![]({{site.baseurl}}/images_posts/Lorenz_mod2_Attractor.png)
 
+### Attractor parameters###
 ```
 float a = 0.9;
 float b = 5.0;
@@ -120,3 +178,29 @@ dz = (-z + x*(b*y +z))  * timestep;
 ##Thomas Attractor##
 
 ![]({{site.baseurl}}/images_posts/thomas_attractor.png)
+### Attractor parameters###
+```
+float b = 0.19;
+
+dx = (-b*x + sin(y)) * timestep;
+dy = (-b*y + sin(z)) * timestep;
+dz = (-b*z + sin(x)) * timestep;
+```
+
+##Three-Scroll Unified Chaotic System Attractor 1##
+
+![]({{site.baseurl}}//images_posts/Three-Scroll_1_Attractor.png)
+
+### Attractor parameters###
+```
+float a = 40.0;
+float b = 0.833;
+float c = 20.0;
+float d = 0.5;
+float e = 0.65;
+       
+ dx = (a*(y-x) + d*x*z)   * timestep * 0.1 ;
+ dy = (c*y - x*z )        * timestep * 0.1 ;
+ dz = (b*z + x*y - e*x*x) * timestep * 0.1 ;
+        
+```
