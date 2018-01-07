@@ -11,8 +11,8 @@ categories:
 img: images_posts/Burke_Shaw_Attractor.jpg
 title: Strange Attractors GPU
 ---
-![]({{site.baseurl}}/images_posts/Burke_Shaw_Attractor.jpg)
-<div style="text-align: right"> Burke-Shaw Attractor </div>
+
+{% include video id="250002549" provider="vimeo" %}
 
 Attractors have been out for a while and as it happens in these cases there're a lot of resources on the internet involving this subject. They are marvellous mathematical objects pretty easy to program that give rise to interesting elegant outcomes. For a deeper understading of what an attractor is I suggest a quick look to the [wiki page](https://en.wikipedia.org/wiki/Attractor) and the [Softology's blog page](http://softology.com.au/tutorials/attractors2d/tutorial.htm). 
 
