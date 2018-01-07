@@ -8,6 +8,7 @@ tags:
 categories:
   - Particle system
 img: images_posts/pDm_001.png
+title: Primal Digital Medium
 ---
 ![]({{site.baseurl}}/images_posts/pDm_001.png)
 
