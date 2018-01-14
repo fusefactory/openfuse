@@ -9,6 +9,7 @@ tags:
 categories:
   - Particle system
 img: images_posts/curl+strA.jpg
+title: Strange Attractors & Curl Noise
 ---
 ## A New Post
 
