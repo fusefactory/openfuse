@@ -35,7 +35,9 @@ loop foreach timestep{
 Each particle determines the number of its neighbors on the left side (all the particles inside a semicircle with radius r) and on the right side(all the particle inside the other semicircle of radius r). The change of its heading angle (delta_phi) every time step is the responsible of the particle's motion. After the rotation each particle moves forward with a fixed velocity.
 
 The key formula to make the system working properly is the one that calculates the angle of rotation.
-![]({{site.baseurl}}/images_posts/pDm_formula.png)
+
+<img src="images_posts/pDm_formula.png" alt="Drawing" style="width: 200px;"/>
+
 
 
 {% include video id="250002549" provider="vimeo" %}
