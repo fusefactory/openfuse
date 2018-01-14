@@ -51,7 +51,103 @@ with a density(particles/space unit) of 0.08
 ```
 In this situation structures similar to cell start to form randomly from the particle soup.
 
-Given these information I then implemented the algorithm in openFrameworks.
+Given these information I then implemented the algorithm in openFrameworks. Starting from the particle system I used previously for [strange attractors post](https://fusefactory.github.io/openfuse/strange%20attractors/particle%20system/Strange-Attractors-GPU/) I then added the magical rule inside the fragment shader so where I update the particle's position and velocity.
 
-![]({{site.baseurl}}/images_posts/pDm_001.png)
+Here's the fragment code for the force.
+```
+vec4 primalForce(vec3 p, vec3 v){
+
+   ivec2 texSize = textureSize(particles0);
+   float angle = 99999999999999.0f;
+
+
+   if(v.x != 0) angle = atan(v.y/v.x);
+
+   vec3 primeForce = vec3(0.0, 0.0, 0.0);
+
+   float alpha = radians(180);
+   float beta = radians(17); 
+   float speed = inSpeed;
+
+   int R = 0;
+   int L = 0;
+   int N = 0;
+
+   // Here I assign the value of the distance threshold for the neighbor search
+   float primeRadius = inRadius;
+   
+   for (int x = 0; x < texSize.x; x ++){
+       for (int y = 0; y < texSize.y; y++) {
+
+           float otherAngle = 99999999999999.0f;
+
+           vec3 pos = texture(particles0, vec2(x, y)).xyz;
+           vec3 otherVel = texture(particles1, vec2(x, y)).xyz;
+
+           float d = distance(p, pos);
+
+    
+           if (d > 0 && d< primeRadius){
+
+               vec2 offsetPosition = vec2(pos-p);
+               float xx = offsetPosition.x * cos(-angle) - offsetPosition.y * sin(-angle);
+               float yy = offsetPosition.x * sin(-angle) + offsetPosition.y * cos(-angle);
+               //
+               if(xx != 0)  otherAngle = atan(yy/xx);
+               //
+               if (otherAngle >= 0) {
+                   L++;
+               }
+               else {
+                   R++;
+               }
+
+           }
+           N = int(L+R);
+       }
+   }
+
+   // Key formula
+   float delta_phi = alpha + beta * N * sign(R - L);
+
+
+   angle += delta_phi;
+
+   float newAngle = angle;
+
+   if(newAngle <= -PI) newAngle += 2*PI;
+   if(newAngle > PI) newAngle -= 2*PI;
+   angle = newAngle;
+
+   // value for display purposes
+   float nMapped = map(N, 0, 100, 0.f, 1.0f);
+   vec4 velocity = vec4(cos(angle) * speed, sin(angle) * speed, 0.0, nMapped);
+
+   return velocity;
+
+}
+```
+
+This force, then added to the velocity value, is the main responsible for the particle motion.
+
+I then tested the simulation changing the key parameters discussed above and here below you can see a few images extracted from these tests.
+
+![]({{site.baseurl}}/images_posts/grab_2018-01-07-18-28-31-489.jpg)
+
+![]({{site.baseurl}}/images_posts/grab_2018-01-07-18-28-46-847.jpg)
+
+![]({{site.baseurl}}/images_posts/grab_2018-01-07-18-32-06-840.jpg)
+
+![]({{site.baseurl}}/images_posts/grab_2018-01-07-18-34-44-476.jpg)
+
+![]({{site.baseurl}}/images_posts/grab_2018-01-14-16-32-41-820.jpg)
+
+![]({{site.baseurl}}/images_posts/grab_2018-01-14-16-34-34-815.jpg)
+
+![]({{site.baseurl}}/images_posts/grab_2018-01-14-17-22-27-866.jpg)
+
+![]({{site.baseurl}}/images_posts/grab_2018-01-14-17-22-55-708.jpg)
+
+
+
 
