@@ -1,6 +1,15 @@
 ---
 published: false
+author: Samuel Pietri
+tags:
+  - Openframeworks
+  - GLSL
+  - Attractors
+  - Curl Noise
+categories:
+  - Particle system
+img: images_posts/curl+strA.jpg
 ---
 ## A New Post
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+![]({{site.baseurl}}/images_posts/curl+strA.jpg)
