@@ -7,10 +7,11 @@ tags:
   - Emergence
 categories:
   - Particle system
-img: images_posts/pDm_001.png
+img: images_posts/pDm_cover_vimeo.jpg
 title: Primal Digital Medium
 ---
-![]({{site.baseurl}}/images_posts/pDm_001.png)
+{% include video id="251051717" provider="vimeo" %}
+
 
 The paper [How a life-like system emerges from a simple particle motion law](https://www.nature.com/articles/srep37969) by Thomas Schmickl, Martin Stefanec & Karl Crailsheim describes a simple motion law for moving and interacting particles leading to a self-structuring, self-reproducing and self-sustaining life-like system. That's the way they describe it in the article and it definetily cought my attention. These emerging patterns look like really basic organism. Some structures emerge and grow over time while the particles interact with each other.
 So I was interested in implementing the system in a simulation program and explore its aesthetic potential.
@@ -36,10 +37,21 @@ Each particle determines the number of its neighbors on the left side (all the p
 
 The key formula to make the system working properly is the one that calculates the angle of rotation.
 
-<img src="images_posts/pDm_formula.png" alt="Drawing" style="width: 200px;"/>
 
+![]({{site.baseurl}}/images_posts/pDm_formula.png)
 
+They discovered an interesting system with the parameter set:
+```
+r =5
+alpha = 180°  	
+beta = 17°
+v = 0.67
 
-{% include video id="250002549" provider="vimeo" %}
+with a density(particles/space unit) of 0.08
+```
+In this situation structures similar to cell start to form randomly from the particle soup.
 
-{% include video id="250002549" provider="vimeo" %}
+Given these information I then implemented the algorithm in openFrameworks.
+
+![]({{site.baseurl}}/images_posts/pDm_001.png)
+
