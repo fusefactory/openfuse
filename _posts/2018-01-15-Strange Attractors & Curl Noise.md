@@ -18,11 +18,9 @@ title: Strange Attractors & Curl Noise
 
 ## Curl Noise ##
 
-video
+{% include video id="251110884" provider="vimeo" %}
 
 ## Adding the attractor ##
 
-video
-
-
+{% include video id="251112065" provider="vimeo" %}
 
