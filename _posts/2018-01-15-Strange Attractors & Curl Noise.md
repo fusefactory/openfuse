@@ -11,7 +11,6 @@ categories:
 img: images_posts/curl+strA.jpg
 title: Strange Attractors & Curl Noise
 ---
-## A New Post
 
 ![]({{site.baseurl}}/images_posts/curl+strA.jpg)
 
@@ -23,4 +22,3 @@ title: Strange Attractors & Curl Noise
 ## Adding the attractor ##
 
 {% include video id="251112065" provider="vimeo" %}
-
