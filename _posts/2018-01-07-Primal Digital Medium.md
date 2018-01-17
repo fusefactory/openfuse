@@ -138,7 +138,7 @@ I then tested the simulation changing the key parameters discussed above and her
 
 ![]({{site.baseurl}}/images_posts/grab_2018-01-07-18-32-06-840.jpg)
 
-![]({{site.baseurl}}/images_posts/grab_2018-01-07-18-34-44-476.jpg)
+![]({{site.baseurl}}/images_posts/grab_2018-01-07-19-33-01-369.jpg)
 
 ![]({{site.baseurl}}/images_posts/grab_2018-01-14-16-32-41-820.jpg)
 
@@ -147,7 +147,3 @@ I then tested the simulation changing the key parameters discussed above and her
 ![]({{site.baseurl}}/images_posts/grab_2018-01-14-17-22-27-866.jpg)
 
 ![]({{site.baseurl}}/images_posts/grab_2018-01-14-17-22-55-708.jpg)
-
-
-
-
