@@ -10,6 +10,7 @@ categories:
   - Particle system
 img: images_posts/curl+strA.jpg
 title: Strange Attractors & Curl Noise
+text: this is a sample text
 ---
 
 ![]({{site.baseurl}}/images_posts/curl+strA.jpg)
