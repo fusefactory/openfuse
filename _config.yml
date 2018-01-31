@@ -9,13 +9,13 @@
 locale                   : "en"
 title                    : "OPENFUSE*"
 title_separator          : "-"
-name                     : "fuse* sharing knowledge blog"
+name                     : "fuse* blog"
 description              : #"Sharing knowledge blog."
-url                      : #https://www.fuseworks.it
+url                      : #https://www.fusefactory.it
 baseurl                  : #https://fusedeveloper.github.io
 repository               : #https://github.com/fusedeveloper
 teaser                   : #"/images/fuse_logo_solo_black.png"
-breadcrumbs              : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
@@ -77,7 +77,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "fuse* sharing knowledge blog."
+  name             : "fuse* BLOG."
   avatar           : "/images/fuse_logo_solo_black.png"
   bio              : "fuse* is a studio that operates in the field of digital arts and design, founded in 2007 with the aim of exploring the expressive potential offered by the creative use of code and digital technologies."
   location         : "Campogalliano, Italy"
@@ -87,20 +87,20 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "https://www.facebook.com/fusefb"
   foursquare       :
   github           : "fusefactory/"
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "http://instagram.com/fuse_works"
   lastfm           :
-  linkedin         :
+  linkedin         : 
   pinterest        :
-  soundcloud       :
+  soundcloud       : "https://soundcloud.com/fuse_works"
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : "https://twitter.com/fuse_works"
   vine             :
   weibo            :
   xing             :
