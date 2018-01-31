@@ -11,6 +11,12 @@ categories:
 img: images_posts/curl+strA.jpg
 title: Strange Attractors & Curl Noise
 text: this is a sample text
+metadata:
+  _posts:
+    - name: Strange Attractors & Curl Noise
+      field:
+        element: text
+        label: adlkjasldkjfa;lskdjfa;lksdf
 ---
 
 ![]({{site.baseurl}}/images_posts/curl+strA.jpg)
