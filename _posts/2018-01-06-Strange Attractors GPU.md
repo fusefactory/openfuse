@@ -9,6 +9,7 @@ categories:
   - Strange Attractors
   - Particle system
 img: images_posts/Burke_Shaw_Attractor.jpg
+label: Integration of curlnoise forces with attractors inside a particle system.
 title: Strange Attractors GPU
 ---
 
