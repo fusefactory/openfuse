@@ -15,6 +15,10 @@ title: Strange Attractors & Curl Noise
 
 ![]({{site.baseurl}}/images_posts/curl+strA.jpg)
 
+
+
+
+Following the work done in [this previous post](https://fusefactory.github.io/openfuse/strange%20attractors/particle%20system/Strange-Attractors-GPU/)
 ## Curl Noise ##
 
 {% include video id="251110884" provider="vimeo" %}
