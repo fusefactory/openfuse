@@ -1,5 +1,15 @@
 ---
 published: false
+author: Samuel Pietri
+tags:
+  - Openframeworks
+  - GLSL
+  - Attractors
+  - Curl Noise
+categories:
+  - Particle system
+img: images_posts/curl+strA.jpg
+video: 'url https://vimeo.com/251449477'
 ---
 ![]({{site.baseurl}}/images_posts/curl+strA.jpg)
 
