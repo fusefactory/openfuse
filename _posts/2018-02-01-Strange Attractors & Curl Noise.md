@@ -10,6 +10,7 @@ categories:
   - Particle system
 img: images_posts/curl+strA.jpg
 video: 'url https://vimeo.com/251449477'
+title: Strange Attractors & Curl Noise
 ---
 ![]({{site.baseurl}}/images_posts/curl+strA.jpg)
 
