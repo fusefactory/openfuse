@@ -17,6 +17,7 @@ metadata:
       field:
         element: text
         label: adlkjasldkjfa;lskdjfa;lksdf
+videos: 'url https://vimeo.com/251449477'
 ---
 
 ![]({{site.baseurl}}/images_posts/curl+strA.jpg)
