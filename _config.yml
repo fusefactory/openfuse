@@ -106,43 +106,6 @@ author:
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
-prose:
-  rooturl: '_posts'
-  siteurl: 'https://fusefactory.github.io/openfuse/m/'
-  ignore:
-    - index.md
-    - _config.yml
-    - /_layouts
-    - /_includes
-  metadata:
-    _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
-      - name: "categories"
-        field:
-          element: "multiselect"
-          label: "Add Categories"
-          placeholder: "Add Categories"
-          alterable: true
-      - name: "title"
-        field:
-          element: "text"
-          label: "Post title"
-          placeholder: "Title"
-          alterable: true
-      - name: "image"
-        field:
-          element: "text"
-          label: "Add Image to Post"
-          placeholder: "Image path (relative to /assets/post-images/)"
-          alterable: true
-      - name: "excerpt_separator"
-        field:
-          element: "hidden"
-          value: "<!--more-->"
-
 # Reading Files
 include:
   - .htaccess
