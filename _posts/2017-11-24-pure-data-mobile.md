@@ -10,7 +10,7 @@ categories:
   - Tutorial
   - Mobile app
 title: Pure Data in Mobile apps (iOS - Android)
-img: images_posts/arecibo_001.jpg
+img: images_posts/pureDataToMobile_cover.jpg
 ---
 
 
