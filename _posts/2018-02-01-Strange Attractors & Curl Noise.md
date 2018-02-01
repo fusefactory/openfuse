@@ -22,6 +22,3 @@ video: 'url https://vimeo.com/251449477'
 
 {% include video id="251112065" provider="vimeo" %}
 
-## A New Post
-
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
