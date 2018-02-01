@@ -1,4 +1,6 @@
 ---
+excerpt_separator: <!--more-->
+layout: post
 published: true
 title: 'OF: good quality screen capture'
 author: Luca Camellini
@@ -8,6 +10,7 @@ tags:
 categories:
   - coding
 img: images_posts/of_capture.png
+image: images_posts/of_capture.png
 ---
 {% include video id="216023820" provider="vimeo" %}
 
