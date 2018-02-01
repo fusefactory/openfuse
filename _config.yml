@@ -108,8 +108,7 @@ author:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://robertiagar.com/'
-  relativeLinks: 'http://robertiagar.com/links.jsonp'
+  siteurl: 'https://fusefactory.github.io/openfuse/m/'
   ignore:
     - index.md
     - _config.yml
