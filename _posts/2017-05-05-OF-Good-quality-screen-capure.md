@@ -7,7 +7,11 @@ tags:
   - tools
 categories:
   - coding
-img: ({{site.baseurl}}/images_posts/of_capture.png)
+<figure>
+    <a href="{{ site.url }}/images_posts/of_capture.png">
+        <img src="{{ site.url }}/images_posts/of_capture.png" alt="">
+    </a>
+</figure>
 ---
 {% include video id="216023820" provider="vimeo" %}
 
