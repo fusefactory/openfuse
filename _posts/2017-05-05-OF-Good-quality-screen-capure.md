@@ -7,7 +7,7 @@ tags:
   - tools
 categories:
   - coding
-img: '({{ site.url }}/images_posts/of_capture.png)'
+img: ({{site.baseurl}}//images_posts/of_capture.png)
 ---
 {% include video id="216023820" provider="vimeo" %}
 
