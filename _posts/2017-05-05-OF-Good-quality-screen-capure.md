@@ -7,7 +7,7 @@ tags:
   - tools
 categories:
   - coding
-img: https://fusefactory.github.io/openfuse/images_posts/of_capture.png)
+img: https://fusefactory.github.io/openfuse/images_posts/of_capture.png
 ---
 {% include video id="216023820" provider="vimeo" %}
 
