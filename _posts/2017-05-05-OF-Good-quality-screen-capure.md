@@ -7,11 +7,7 @@ tags:
   - tools
 categories:
   - coding
-<figure>
-    <a href="{{ site.url }}/images_posts/of_capture.png">
-        <img src="{{ site.url }}/images_posts/of_capture.png" alt="">
-    </a>
-</figure>
+img: https://fusefactory.github.io/openfuse/images_posts/of_capture.png)
 ---
 {% include video id="216023820" provider="vimeo" %}
 
