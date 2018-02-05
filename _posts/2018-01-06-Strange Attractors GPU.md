@@ -8,7 +8,7 @@ tags:
 categories:
   - Strange Attractors
   - Particle system
-img: images_posts/Burke_Shaw_Attractor.jpg
+img: images_posts/Burke_Shaw_Attractor.jpg 
 title: Strange Attractors GPU
 ---
 

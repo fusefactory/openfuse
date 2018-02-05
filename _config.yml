@@ -13,7 +13,7 @@ name                     : "fuse* blog"
 description              : #"Sharing knowledge blog."
 url                      : #https://www.fusefactory.it
 baseurl                  : #https://fusedeveloper.github.io
-repository               : #https://github.com/fusedeveloper
+repository               : https://github.com/fusedeveloper
 teaser                   : #"/images/fuse_logo_solo_black.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -105,7 +105,6 @@ author:
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-
 
 # Reading Files
 include:
@@ -241,6 +240,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
