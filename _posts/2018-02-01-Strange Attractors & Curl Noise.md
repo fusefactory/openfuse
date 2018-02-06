@@ -21,7 +21,10 @@ abstract: >-
 
 
 
-Following the work done in [this previous post](https://fusefactory.github.io/openfuse/strange%20attractors/particle%20system/Strange-Attractors-GPU/)
+Following the work done in [this previous post](https://fusefactory.github.io/openfuse/strange%20attractors/particle%20system/Strange-Attractors-GPU/) I tried to widen the aesthetic possibilities given by the strange attractors by adding other behaviors to the particle system. In particular I wanted to give the system a more "fluid" feeling without any complex physical simulation going on but taking advantage once again of the noise function. There's a specific function commonly known as "curl noise" that is perfectly suited for this purpose and that is the main reason I...
+
+
+In this video the particles are affected only by
 ## Curl Noise ##
 
 {% include video id="251110884" provider="vimeo" %}
