@@ -8,9 +8,12 @@ tags:
   - Curl Noise
 categories:
   - Particle system
-img: images_posts/curl+strA.jpg
+img: 'https://fusefactory.github.io/openfuse/images_posts/curl+strA.jpg'
 video: 'url https://vimeo.com/251449477'
 title: Strange Attractors & Curl Noise
+abstract: >-
+  Implementation of curl noise forces and strange attractors into a particle
+  system.
 ---
 
 ![]({{site.baseurl}}/images_posts/curl+strA.jpg)
