@@ -9,7 +9,8 @@ tags:
   - aframe
 categories:
   - coding
-img: images_posts/2017-07-12-florim-vr.gif
+img: 'https://fusefactory.github.io/openfuse/images_posts/2017-07-12-florim-vr.gif'
+abstract: A comparison between Cinder and Aframe for virtual reality development.
 ---
 
 ## Florim Cinder Demo
