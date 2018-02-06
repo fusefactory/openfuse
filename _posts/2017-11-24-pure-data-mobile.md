@@ -10,7 +10,10 @@ categories:
   - Tutorial
   - Mobile app
 title: Pure Data in Mobile apps (iOS - Android)
-img: images_posts/pureDataToMobile_cover.jpg
+img: 'https://fusefactory.github.io/openfuse/images_posts/pureDataToMobile_cover.jpg'
+abstract: >-
+  A simple way to implement generative audio inside mobile app is using Pure
+  Data.
 ---
 
 
