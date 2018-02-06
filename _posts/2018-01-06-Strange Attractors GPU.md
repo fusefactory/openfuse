@@ -8,8 +8,9 @@ tags:
 categories:
   - Strange Attractors
   - Particle system
-img: images_posts/Burke_Shaw_Attractor.jpg 
+img: 'https://fusefactory.github.io/openfuse/images_posts/Burke_Shaw_Attractor.jpg'
 title: Strange Attractors GPU
+abstract: Aesthetic exploration of attractors displaying a fractal-like structure.
 ---
 
 {% include video id="250002549" provider="vimeo" %}
