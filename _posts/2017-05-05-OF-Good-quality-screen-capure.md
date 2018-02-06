@@ -7,7 +7,8 @@ tags:
   - tools
 categories:
   - coding
-img: https://fusefactory.github.io/openfuse/images_posts/of_capture.png
+img: 'https://fusefactory.github.io/openfuse/images_posts/of_capture.png'
+abstract: Tutorial on how to record quality videos out of openFrameworks.
 ---
 {% include video id="216023820" provider="vimeo" %}
 
