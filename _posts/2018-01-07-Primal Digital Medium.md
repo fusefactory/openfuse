@@ -7,8 +7,12 @@ tags:
   - Emergence
 categories:
   - Particle system
-img: images_posts/pDm_cover_vimeo.jpg
+img: 'https://fusefactory.github.io/openfuse/images_posts/pDm_cover_vimeo.jpg'
 title: Primal Digital Medium
+abstract: >-
+  Exploration of a simple motion law for moving and interacting particles
+  leading to a self-structuring, self-reproducing and self-sustaining life-like
+  system.
 ---
 {% include video id="251051717" provider="vimeo" %}
 
