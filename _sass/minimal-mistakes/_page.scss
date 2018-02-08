@@ -75,8 +75,8 @@
   }
 
   a {
-    text-decoration: none;
-
+    text-decoration: underline;
+    
     &:hover {
       text-decoration: underline;
 
@@ -137,7 +137,6 @@
 
     .wrapper {
       padding-left: 1em;
-      padding-right: 1em;
 
       @include breakpoint($x-large) {
         max-width: $x-large;

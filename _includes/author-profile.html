@@ -3,6 +3,20 @@
 {% else %}
   {% assign author = site.author %}
 {% endif %}
+{% if author.avatar %}
+<div class="author__avatar">
+    <a class="site-title" href="{{ '/' | absolute_url }}">
+    {% if author.avatar contains "://" %}
+    <img src="{{ author.avatar }}" alt="{{ author.name }}" itemprop="image">
+        {% else %}
+        <img src="{{ author.avatar | absolute_url }}" class="author__avatar" alt="{{ author.name }}" itemprop="image">
+            {% endif %}
+            </a>
+            </div>
+{% endif %}
+
+<h2>{{ site.title }}</h2>
+
 
 <div itemscope itemtype="http://schema.org/Person">
 
@@ -15,15 +29,7 @@
         {% endif %}
     </div>
 
-  {% if author.avatar %}
-    <div class="author__avatar">
-      {% if author.avatar contains "://" %}
-        <img src="{{ author.avatar }}" alt="{{ author.name }}" itemprop="image">
-      {% else %}
-        <img src="{{ author.avatar | absolute_url }}" class="author__avatar" alt="{{ author.name }}" itemprop="image">
-      {% endif %}
-    </div>
-  {% endif %}
+
 <br /><br />
 
 
