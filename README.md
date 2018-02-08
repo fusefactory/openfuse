@@ -5,3 +5,6 @@ fuse* is a studio that operates in the field of digital arts and design, founded
 Powered by Jekyll & Minimal Mistakes.
 
 https://fusefactory.github.io/openfuse/
+
+To run locally:
+bundle exec jekyll serve
