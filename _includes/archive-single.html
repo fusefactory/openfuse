@@ -35,17 +35,19 @@
         <a href="{{ post.url | absolute_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
+    <p>
     {% if post.author %}
-     <p><strong>Author: </strong> {{ post.author }}</p>
+     <strong>Author: </strong> {{ post.author }}<br />
     {% endif %}
     {% if post.last_modified_at %}
-      <p class="page__meta"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ post.last_modified_at | date: "%Y-%m-%d" }}">{{ post.last_modified_at | date: "%B %d, %Y" }}</time></p>
+     <strong>{{ site.data.ui-text[site.locale].date_label | default: "Updateddasda:" }}</strong> <time datetime="{{ post.last_modified_at | date: "%Y-%m-%d" }}">{{ post.last_modified_at | date: "%B %d, %Y" }}</time>
     {% elsif post.date %}
-      <p class="page__meta"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+      <strong>{{ site.data.ui-text[site.locale].date_label | default: "Updatedfdd:" }}</strong> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
     {% endif %}
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
-    {% endif %}
+    </p>
+<!--    {% if post.read_time %}-->
+<!--      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>-->
+<!--    {% endif %}-->
     <br />
     {% if post.img %}
       <img src="{{img}}" class="author__avatar" alt="" itemprop="image" />   

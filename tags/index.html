@@ -3,17 +3,22 @@ layout: archive
 permalink: /tags/
 title: "POST BY TAGS"
 author_profile: true
+current_tag : Arecibo
 ---
+
 
 {% include group-by-array collection=site.posts field="tags" %}
 {% for tag in group_names %}
-  <hr />
-  {% assign posts = group_items[forloop.index0] %}
-   <i class="fa fa-fw fa-tags" aria-hidden="true"></i>TAG:
-    <span itemprop="keywords">
-      <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | absolute_url }}" class="page__taxonomy-item" rel="tag">{{ tag }}</a>
-    </span>
-  {% for post in posts %}
-    {% include archive-single.html %}
-  {% endfor %}
+
+      <hr />
+      {% assign posts = group_items[forloop.index0] %}
+      TAG:
+        <span itemprop="keywords">
+          <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | absolute_url }}" class="page__taxonomy-item" rel="tag">{{ tag }}</a>
+        </span>
+      {% for post in posts %}
+        {% include archive-single.html %}
+      {% endfor %}
+
 {% endfor %}
+

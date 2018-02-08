@@ -10,7 +10,7 @@ author_profile: true
 {% for category in group_names %}
   <hr />
   {% assign posts = group_items[forloop.index0] %}
-  <i class="fa fa-fw fa-folder-open" aria-hidden="true"></i>CATEGORY:
+ CATEGORY:
     <span itemprop="keywords">
       <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | absolute_url }}" class="page__taxonomy-item" rel="tag">{{ category }}</a>
     </span> 
