@@ -1,7 +1,7 @@
 ---
 published: true
 title: 'VR Development: Cinder-VR VS Aframe'
-author: Mark
+author: Mark Van de Korput
 tags:
   - vr
   - cinder
