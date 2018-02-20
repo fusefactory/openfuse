@@ -36,7 +36,7 @@ In this video the particles are affected only by the curl noise function.
 
 
 ### Adding the attractor ###
-Then I decided to add at this setup the behavior of the attractors I studied earlier. Obviously the main interest was to 
+Then I decided add things differentely and apply  the behavior of the attractors I studied earlier. Obviously the main interest was to mix the two forces while changing the attracor kind. These are some of the results.
 
 ![]({{site.baseurl}}/images_posts/curl_attractor_001.png)
 
