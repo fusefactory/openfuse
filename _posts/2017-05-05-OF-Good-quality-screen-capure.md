@@ -91,10 +91,11 @@ To record you screen capture as a movie you need to add this lines to some of yo
 	if(key=='R'){
         bRecording = !bRecording;
         if(bRecording && !vidRecorder.isInitialized()) {
-        // insert your path in the following row and your settings 1920x1080 60fps - the last 2 parms are zero because in my case I don't want to record audio..
- vidRecorder.setup("$HOME/Desktop/grab_"+ofGetTimestampString()+".mov", recordFbo.getWidth(),recordFbo.getHeight(), 60, 0, 0);
+        //insert your path in the following row and your settings 1920x1080 60fps - the last 2 parms are zero because in my case I don't want to record audio..
+            ofFilePath f;
+ vidRecorder.setup(f.getUserHomeDir() + "/Desktop/grab_"+ofGetTimestampString()+".mov", recordFbo.getWidth(),recordFbo.getHeight(), 60, 0, 0);
                        
-            // Start recording
+            //Start recording
             vidRecorder.start();
         }
         else if(!bRecording && vidRecorder.isInitialized()) {
