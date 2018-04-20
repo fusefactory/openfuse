@@ -12,9 +12,9 @@ tags:
 
 categories:
   - audio
-  -
+  - tutorial
 img: 'https://fusefactory.github.io/openfuse/images_posts/audiorewire_cover.jpg'
-abstract: 'TODO: add subtitle'
+abstract: 'Tools for audio rewire in Mac OS and Windows 10'
 ---
 
 A recurring need at [fuse*](http://www.fuseworks.it/) is the need to have a great iteration between audio and video. The starting point is to have the possibility to have the audio signal inside the generative software (usually written in [OpenFrameworks](http://openframeworks.cc/).
@@ -86,7 +86,7 @@ We used often [SoundFlower](https://github.com/RogueAmoeba/Soundflower-Original)
 
 [JACK Audio](http://jackaudio.org/) is _"a professional sound server daemon that provides real-time, low-latency connections for both audio and MIDI data between applications that implement its API"_.
 
-IMMAGINE
+![Jackaudio.png](../images_posts/2018-04-20-jackaudio.png)
 
 
 Pros | Cons
@@ -107,8 +107,7 @@ Very flexible routing audio for each application |
 I tested with success OF 0.9.8 in a Windows 10 machine using Visual Studio 2015. After started the OF app, you can see the name of application in the _Jack Audio Connection Kit_ and you can connect (using mouse dragging) the Output to the Input. You can create [persistent connection](http://jackaudio.org/faq/persistent_connections.html) using [PatchBay](http://www.rncbc.org/drupal/node/76).
 
 
-IMMAGINE
-
+![Jackaudio.png](../images_posts/2018-04-20-dante-via.png)
 
 
 
