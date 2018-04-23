@@ -9,12 +9,11 @@ tags:
   - Rogueamoeba
   - Audinate
   - OpenFrameworks
-
 categories:
   - audio
   - tutorial
 img: 'https://fusefactory.github.io/openfuse/images_posts/audiorewire_cover.jpg'
-abstract: 'Tools for audio rewire in Mac OS and Windows 10'
+abstract: Tools for audio rewire in Mac OS and Windows 10
 ---
 
 A recurring need at [fuse*](http://www.fuseworks.it/) is the need to have a great iteration between audio and video. The starting point is to have the possibility to have the audio signal inside the generative software (usually written in [OpenFrameworks](http://openframeworks.cc/).
@@ -26,7 +25,7 @@ First we created an base OF example to read multi input audio channels.
 
 ### MultiAudioInExample
 
-MultiAudioInExample is an extension of _audioInputExample_ (included in OF workspace) with the possibility to see more than 2 input audio channels.
+[MultiAudioInExample](https://github.com/fusefactory/MultiAudioInExample) is an extension of _audioInputExample_ (included in OF workspace) with the possibility to see more than 2 input audio channels.
 
 ![MultiAudioInExampleScreenshot.png](../images_posts/2018-04-20-MultiAudioInExampleScreenshot.png)
 
