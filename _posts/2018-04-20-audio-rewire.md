@@ -16,12 +16,12 @@ img: 'https://fusefactory.github.io/openfuse/images_posts/audiorewire_cover.jpg'
 abstract: Tools for audio rewire in Mac OS and Windows 10
 ---
 
-A recurring need at [fuse*](http://www.fuseworks.it/) is the need to have a great iteration between audio and video. The starting point is to have the possibility to have the audio signal inside the generative software (usually written in [OpenFrameworks](http://openframeworks.cc/).
+A recurring need at [fuse*](http://www.fuseworks.it/) is the ability to have a strong interaction between audio and video. The starting point is to have the possibility to have the audio signal inside the generative software (usually written in [OpenFrameworks](http://openframeworks.cc/)).
 
-For this reason we have studied the several possibility to have audio rewire for OF
-environment available for Mac OS and Windows 10.
+For this reason we have studied several possibilities to have audio rewire for OF
+environment available both for Mac OS and Windows 10.
 
-First we created an base OF example to read multi input audio channels.
+First we created a base OF example to read multi-input audio channels.
 
 ### MultiAudioInExample
 
@@ -29,12 +29,12 @@ First we created an base OF example to read multi input audio channels.
 
 ![MultiAudioInExampleScreenshot.png](../images_posts/2018-04-20-MultiAudioInExampleScreenshot.png)
 
-You can setup the number of input channel and the buffer size changed the const variables declared in _ofApp.h_
+You can setup the number of input channels and the buffer size changing the const variables declared in _ofApp.h_
 ```c++
 const int numChannels = 12;
 const int bufferSize = 512;
 ```
-and the other params of [ofSoundStream](http://openframeworks.cc/documentation/sound/ofSoundStream/)
+and the other parameters of [ofSoundStream](http://openframeworks.cc/documentation/sound/ofSoundStream/)
 ```c++
 soundStream.setup(this, 0, numChannels, 44100, bufferSize, 4);
 ```
@@ -44,15 +44,15 @@ ofSoundStream, after setup, called the method _audioIn_ using [ofSoundBuffer](ht
 void ofApp::audioIn(ofSoundBuffer &inBuffer)
 ```
 
-alternatively you alternatively you can use the float buffer directly (now is commented). **In my experience it's more boring but it solved me an annoying vector error in Window 10 using audio jack.**
+alternatively you can use the float buffer directly (now is commented). **In my experience it's more boring but it solved me an annoying vector error in Window 10 using audio jack.**
 ```c++
 void ofApp::audioIn(float * input, int bufferSize, int nChannels)
 ```
 
 #Audio rewire
 
-Software compatibility is something very frustrating. For this reason we divided software for compatibility, usually we work on MacBook Pro and our clients use windows machine.
-So ... from the bottom of my heart I apologise to linux users (which I admire every day) but I took into consideration only Mac OS and Windows.
+Software compatibility is something very frustrating. For this reason we divided software for compatibility, usually we work on MacBook Pro with Mac OS and our clients use Windows OS machine.
+So, from the bottom of my heart - I apologise to linux users (which I admire every day) - but I took into consideration only Mac OS and Windows.
 
 Some other compatibility is available, but in this post we will only consider the combinations that we have personally tested.
 
@@ -76,7 +76,7 @@ We use Loopback for our interactive show [Dökk](http://fuseworks.it/en/project/
 
 ## SoundFlower
 
-We used often [SoundFlower](https://github.com/RogueAmoeba/Soundflower-Original) in the past, but now we use only Loopback. So i can't explain if is still available for the last Mac OS, but seeing the github repository is not update from several years.
+We used often [SoundFlower](https://github.com/RogueAmoeba/Soundflower-Original) in the past, but now we use only Loopback. So I can't explain if it is still available for the last Mac OS, but seeing the github repository it's not updated from several years.
 
 
 # Windows
@@ -106,12 +106,12 @@ I tested with success OF 0.9.8 in a Windows 10 machine using Visual Studio 2015.
 
 ## Dante Via
 
-After numerous researches i finally found an alternative to Loopback for Windows, this is [Danta Via](https://www.audinate.com/products/software/dante-via).
+After numerous researches I finally found an alternative to Loopback for Windows, this is [Danta Via](https://www.audinate.com/products/software/dante-via).
 
 Pros | Cons
 ------------ | -------------
 Easy to use and very easy configuration | It's not free, you need to buy the [licence](https://www.audinate.com/products/software/dante-via#getvia)
-Avaible for Windows and Mac OS | It's not open source
+Available for Windows and Mac OS | It's not open source
 Very flexible route audio for each application| Limited to 16x16 channels
 Possibility to route sound over network [[3]()]  |
 
@@ -124,4 +124,4 @@ Possibility to route sound over network [[3]()]  |
 
 # Audio Over network
 
-An interesting research is send audio samples buffer over network. We tried through OSC messages between Max MSP and OpenFrameworks, but we met several problem. If you have some suggestion or ideas are welcome!
+An interesting research is send audio samples buffer over network. We tried through OSC messages between Max/MSP and OpenFrameworks, but we met several problems. If you have some suggestion or ideas, you are welcome!
