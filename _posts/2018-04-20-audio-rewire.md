@@ -27,7 +27,8 @@ First we created a base OF example to read multi-input audio channels.
 
 [MultiAudioInExample](https://github.com/fusefactory/MultiAudioInExample) is an extension of _audioInputExample_ (included in OF workspace) with the possibility to see more than 2 input audio channels.
 
-![MultiAudioInExampleScreenshot.png](../images_posts/2018-04-20-MultiAudioInExampleScreenshot.png)
+![MultiAudioInExampleScreenshot.png]({{site.baseurl}}/images_posts/2018-04-20-MultiAudioInExampleScreenshot.png)
+
 
 You can setup the number of input channels and the buffer size changing the const variables declared in _ofApp.h_
 ```c++
@@ -69,7 +70,7 @@ Continuous updates | It's not open source
 Autostart | Available only for Mac OS
 Unlimited virtual channels (tested 12x channels) | Static routing audio (you cannot select each application)
 
-![Loopback.png](../images_posts/2018-04-20-loopback.png)
+![Loopback.png]({{site.baseurl}}/images_posts/2018-04-20-loopback.png)
 
 
 We use Loopback for our interactive show [Dökk](http://fuseworks.it/en/project/dokk-en/) and we are very satisfied: you need just select Loopback as audio device and create virtual channels.
@@ -96,7 +97,7 @@ Very flexible routing audio for each application |
 
 [2] _In Live 10 select Driver Type: ASIO4ALL, Audio Output Device: JackRouter._
 
-![Jackaudio.png](../images_posts/2018-04-20-jackaudio.png)
+![Jackaudio.png]({{site.baseurl}}/images_posts/2018-04-20-jackaudio.png)
 
 
 ##### JACK with OpenFrameworks
@@ -118,7 +119,7 @@ Possibility to route sound over network [[3]()]  |
 [3] _Very interesting, but I did not have the chance to test it._
 
 
-![DanteVia.png](../images_posts/2018-04-20-dante-via.png)
+![DanteVia.png]({{site.baseurl}}/images_posts/2018-04-20-dante-via.png)
 
 
 
