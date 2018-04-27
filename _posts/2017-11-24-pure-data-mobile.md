@@ -6,7 +6,7 @@ tags:
   - iOS
   - Xcode
 categories:
-  - Procedural sound
+  - Procedural-sound
   - Tutorial
   - Mobile app
 title: Pure Data in Mobile apps (iOS - Android)
