@@ -15,18 +15,14 @@ title: ofxDepthStream
 
 This was initially just a little R&D project to research the possibilities of using the Orbbec Persee as a replacement for the Kinect as the latter has [officially been discontinued](https://www.fastcodesign.com/90147868/exclusive-microsoft-has-stopped-manufacturing-the-kinect).
 
-Anticipating future use and not wanting to put all our money on Orbbec, this has turned into a [device-agnostic tool-set](https://github.com/fusefactory/ofxDepthStream) for using depth sensor image-streams streamed over a network.
+Anticipating future use and the possibility to use different depth-sensors in the same project, this has turned into a [device-agnostic tool-set](https://github.com/fusefactory/ofxDepthStream) for using depth sensor image-streams streamed over a network.
 
 ### Installing Ubuntu
-The first step was getting the Orbbec Persee “to work”. Due to poor documentation and what seemed -at least during this project- like very outdated SDKs, initial attempts to create applications for the Android operating system that comes pre-installed on the Persee proved very complicated. A lot of people on Orbbec’s official forum also seemed to suggest that it’s better to install Ubuntu on the Persee, so that’s what I ended up doing.
+The first step was getting the Orbbec Persee “to work”. Initial attempts to create applications for the Android operating system that comes pre-installed on the Persee proved very complicated. A lot of people on Orbbec’s official forum also seemed to suggest that it’s better to install Ubuntu on the Persee, so that’s what I ended up doing.
 
 
-### Orbbec Astra SDK
-Having Ubuntu 16.04 up and running on the persee, first I tried to build any of the example applications in the latest version of the Orbbec Astra SDK for Linux. Again I didn’t succeed and the documentation in the SDK for some strange reason included instructions for all platforms except Linux, which was disappointing.
-
-
-### OpenNI SDK
-Next I tried Orbbec’s OpenNI SDK, with which I was finally able to build a functional application that gets a depth-image stream from the Orbbec’s sensor. (Up until today unfortunately the color-stream is not working because the Orbbec OpenNI drivers don’t support the color-stream).
+### Building a sample application on the orbbec
+Having Orbbec's Ubuntu 16.04 image up and running on the persee, first I tried to build any of the example applications in the latest version of the Orbbec Astra SDK for Linux. Unfortunately I didn’t succeed and the documentation didn't provide any further information, so next I tried Orbbec’s OpenNI SDK, with which I was finally able to build a functional application that gets a depth-image stream from the Orbbec’s sensor.
 
 
 ### Network Transmitter/Receiver
