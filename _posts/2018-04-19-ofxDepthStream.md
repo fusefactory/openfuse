@@ -32,8 +32,8 @@ Being able to read realtime camera data, the next step was to stream this data o
 * Transmitter starts sending  depth-image frames
 * Frames are compressed using zlib
 * Every frame consists of
-* * a 4-byte header which specifies the size (in bytes) of the main data block
-* * the main data block containing the frame's compressed image-data
+  * a 4-byte header which specifies the size (in bytes) of the main data block
+  * the main data block containing the frame's compressed image-data
 * Client disconnects
 * Transmitter stops sending depth-image frames and starts listening for new connections
 
