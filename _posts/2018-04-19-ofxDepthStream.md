@@ -22,16 +22,18 @@ The first step was getting the Orbbec Persee “to work”. Initial attempts to 
 
 
 ### Building a sample application on the orbbec
-Having Orbbec's Ubuntu 16.04 image up and running on the persee, first I tried to build any of the example applications in the latest version of the Orbbec Astra SDK for Linux. Unfortunately I didn’t succeed and the documentation didn't provide any further information, so next I tried Orbbec’s OpenNI SDK, with which I was finally able to build a functional application that gets a depth-image stream from the Orbbec’s sensor.
+Having Orbbec's Ubuntu 16.04 image up and running on the persee, first I tried to build any of the example applications in the latest version of the Orbbec Astra SDK for Linux. Unfortunately I didn’t succeed and the documentation didn't provide any path forward, so next I tried Orbbec’s OpenNI SDK, with which I was finally able to build a functional application that gets a depth-image stream from the Persee’s sensor.
 
 
 ### Network Transmitter/Receiver
-Being able to read realtime camera data, the next step was to stream this data over a network. Fuse* has been using multiple Kinect network streams in their live-performance shows for a couple of years, so I could use the existing tested & proven protocol, which looks like this;
-* Transmitter application listens for incoming connection from a client on a specific port
-* Client connects (using the persee’s IP-address/hostname and network port)
+Being able to read realtime camera data, the next step was to stream this data over a network. fuse* has been using multiple Kinect network streams in their live-performance shows for a couple of years, so I could use the existing tested & proven protocol, which looks like this;
+* Transmitter application listens for incoming connection from a client on a TCP port
+* Client connects (using the transmitter’s IP-address/hostname and network port)
 * Transmitter starts sending  depth-image frames
 * Frames are compressed using zlib
-* Every frame consists of a 4-byte header which spcifies the size (in bytes) of the main data block, and the main data block containing the compressed data
+* Every frame consists of
+* * a 4-byte header which specifies the size (in bytes) of the main data block
+* * the main data block containing the frame's compressed image-data
 * Client disconnects
 * Transmitter stops sending depth-image frames and starts listening for new connections
 
