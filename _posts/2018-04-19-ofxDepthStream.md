@@ -17,12 +17,10 @@ This was initially just a little R&D project to research the possibilities of us
 
 Anticipating future use and the possibility to use different depth-sensors in the same project, this has turned into a [device-agnostic tool-set](https://github.com/fusefactory/ofxDepthStream) for using depth sensor image-streams streamed over a network.
 
-### Installing Ubuntu
-The first step was getting the Orbbec Persee “to work”. Initial attempts to create applications for the Android operating system that comes pre-installed on the Persee proved very complicated. A lot of people on Orbbec’s official forum also seemed to suggest that it’s better to install Ubuntu on the Persee, so that’s what I ended up doing.
-
-
 ### Building a sample application on the orbbec
-Having Orbbec's Ubuntu 16.04 image up and running on the persee, first I tried to build any of the example applications in the latest version of the Orbbec Astra SDK for Linux. Unfortunately I didn’t succeed and the documentation didn't provide any path forward, so next I tried Orbbec’s OpenNI SDK, with which I was finally able to build a functional application that gets a depth-image stream from the Persee’s sensor.
+The first step was to set up the build tools on the Orbbec Persee. Initial attempts to create applications for the Android operating system that comes pre-installed on the Persee proved very complicated. A lot of people on Orbbec’s official forum also seemed to suggest that it’s better to install Ubuntu on the Persee, so that’s what I ended up doing.
+
+Having Orbbec's Ubuntu 16.04 image up and running on the persee, first I tried to build any of the example applications in the latest version of the Orbbec Astra SDK for Linux. Unfortunately I didn’t succeed and the documentation didn't provide any path forward so next I tried Orbbec’s OpenNI SDK, with which I was finally able to build a functional application that gets a depth-image stream from the Persee’s sensor.
 
 
 ### Network Transmitter/Receiver
