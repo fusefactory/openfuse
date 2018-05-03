@@ -46,18 +46,20 @@ All of the code that was written for sending and receiving the compressed depth-
 For now OpenFrameworks is the primary software development framework used in fuse* projects. Therefore an OpenFrameworks addon was the first choice to wrap everything we need to use the depth-sensors in a project into a re-usable package. Having 90% of the functionality already covered in the before-mentioned DepthStream library, the only OpenFrameworks-specific code (in the [ofxDepthStream::](https://fusefactory.github.io/ofxDepthStream/docs/html/namespaceofx_depth_stream.html) namespace) in the addon is the code that uses the depth-stream data to populate ofTexture and ofMesh instances.
 
 ## Example applications
-The example applications in the addon weren’t only written for documentation and demonstration purposes, but we basically written while their respective features were being developed.
+The example applications in the addon weren’t only written for documentation and demonstration purposes, but I basically wrote them while developing their respective features.
 
 ### A simple client that loads the depth-stream into a texture
 This was the obvious first client application that was written. Feature-wise it’s very simple; it receives a depth-image stream, turns it into a texture and draws it to the screen. Aside from making sure these features work however, some effort was also made to make the API both as simple as possible and as flexible as possible, while also keeping performance in mind.
 
-The result is that it only requires only one custom variable and two lines of code to have a realtime-depth image stream that can be drawn to the screen;
+The result is that it only requires only one custom variable and two lines of code to have a realtime depth-image stream that can be drawn to the screen;
 
 ```
 // our network stream receiver
 depth::ReceiverRef depthReceiverRef;
+
 // start our receiver
 depthReceiverRef = depth::Receiver::createAndStart(“persee.local”, 4445);
+
 // load incoming data into a texture
 ofxDepthStream::loadDepthTexture(*depthReceiverRef, depthTex);
 ````
@@ -88,11 +90,11 @@ depth::emptyAndInflateBuffer(*receiverRef, [this](const void* data, size_t size)
 
 ### A record/playback demo
 To optimize workflows and enable development even when the depth-sensors are not available it is useful to be able to record and playback depth image streams, so basic recording and playback functionality is featured in the DepthStream library.
-Because this step required different information streams coming from either the network or a playback instance, going either directly to the screen or first through a recorder instance, it helped design some intermediate utility classes (the depth::Frame and depth::Buffer classes) which now make it easy to (re-)connect the various parts of the application in way that feels like the coder’s version of connecting audio-cables.
+Because this step required different information streams coming from either the network or a playback instance, going either directly to the screen or first through a recorder instance, it helped design some intermediate utility classes (the depth::Frame and depth::Buffer classes) which now make it easy to (re-)connect the various parts of the application in a way that feels like the coder’s version of connecting audio-cables.
 
 
 ### A dual-stream benchmark app
-This application was a first test of using two different network streams simultaneously. Because we mostly stream over wifi during development, performance quickly became an issue and quantitative benchmark tools were added to help us optimize the use of our bandwidth.
+This application was a first test with using two different network streams simultaneously. Because we mostly stream over wifi during development, performance quickly became an issue and quantitative benchmark tools were added to help us optimize the use of our bandwidth.
 
 
 
@@ -100,7 +102,7 @@ This application was a first test of using two different network streams simulta
 _The DualStream Benchmark app with an Orbbec Persee (left) streaming 16-bit depth-stream at 640x480 and a Kinect V2 (right) streaming 32-bit at 512x424._
 
 
-### An advanced touch-detector application (WIP)
+### Advanced touch-detector application (WIP)
 
 Currently we’re researching if/how we can use depth-sensors to turn an ordinary wall into a touch-screen. The code for this research is written as yet another example application in the addon, but in a private repository (for now). Those results will be saved for a later post...
 
