@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 author: Mark
 tags:
   - Openframeworks
@@ -62,7 +62,7 @@ depthReceiverRef = depth::Receiver::createAndStart(“persee.local”, 4445);
 
 // load incoming data into a texture
 ofxDepthStream::loadDepthTexture(*depthReceiverRef, depthTex);
-````
+```
 
 ### A simple client that loads the depth-stream into a mesh
 While the simple client example app shows the very minimal implementation, this application demonstrates the fleixiblity of the API; showing support for a workflow with two different uses of the same depth-image stream; loading both a texture and a mesh.
