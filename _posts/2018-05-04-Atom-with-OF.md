@@ -11,7 +11,7 @@ img: 'https://fusefactory.github.io/openfuse/images_posts/atom_w_of_cover.png'
 abstract: Tutorial on how to use Atom to run openFrameworks project.
 title: Run OF project inside Atom
 ---
-{% include video id="216023820" provider="vimeo" %}
+![OF_inside_Atom]({{site.baseurl}}/images_posts/atom_w_of_cover.png)
 
 Downlaod Atom and OF.
 
@@ -45,5 +45,7 @@ ofxGui
 ofxXmlSettings
 
 ```
+
+If you use libraries or "package" like MSAOpenCL.framework that you usually add inside XCode as "Linked Frameworks and Libraries", you need to be sure that you have addon_config.mk inside the addons folder.
 
 That's all.
