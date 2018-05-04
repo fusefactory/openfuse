@@ -49,3 +49,10 @@ ofxXmlSettings
 If you use libraries or "package" like MSAOpenCL.framework that you usually add inside XCode as "Linked Frameworks and Libraries", you need to be sure that you have addon_config.mk inside the addons folder.
 
 That's all.
+
+GDM-debugger
+https://sourceware.org/gdb/wiki/BuildingOnDarwin
+
+gdm_8.0.1 for Mac OS HighSierra 10.13	
+https://lists.gnu.org/archive/html/info-gnu/2017-09/msg00005.html
+
