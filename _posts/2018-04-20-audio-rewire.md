@@ -82,7 +82,8 @@ We used often [SoundFlower](https://github.com/RogueAmoeba/Soundflower-Original)
 
 # Windows
 
-##Jack Audio
+
+##Jack Audio##
 
 [JACK Audio](http://jackaudio.org/) is _"a professional sound server daemon that provides real-time, low-latency connections for both audio and MIDI data between applications that implement its API"_.
 
