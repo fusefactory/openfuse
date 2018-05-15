@@ -12,7 +12,7 @@ tags:
 categories:
   - audio
   - tutorial
-img: 'https://fusefactory.github.io/openfuse/images_posts/audiorewire_cover.jpg'
+img: images_posts/audiorewire_cover.jpg
 abstract: Tools for audio rewire in Mac OS and Windows 10
 ---
 
