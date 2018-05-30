@@ -54,7 +54,7 @@
 
   h2 {
     padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 0px solid $border-color;
   }
 
   p, li, dl {
@@ -235,6 +235,7 @@
   color: mix(#fff, $gray, 25%);
   font-family: $sans-serif;
   font-size: $type-size-6;
+  font-family: $serif;
 
   p {
     margin: 0;

@@ -32,7 +32,7 @@
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | absolute_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
-        <a href="{{ post.url | absolute_url }}" rel="permalink">{{ title }}</a>
+        <a href="{{ post.url | absolute_url }}" rel="permalink">{{ title }}
       {% endif %}
     </h2>
     <h3>
@@ -57,7 +57,7 @@
     {% else %}
     <br /><br />
     {% endif %}
-
+</a>
 <!--    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 500 }}</p>{% endif %}-->
   </article>
   <br /><br />
