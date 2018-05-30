@@ -29,6 +29,7 @@
 
   + .list__item .archive__item-title {
     margin-top: 0.5em;
+
   }
 }
 
@@ -62,6 +63,7 @@
 .archive__item-teaser {
   border-radius: $border-radius;
   overflow: hidden;
+
   img {
     width: 100%;
   }
@@ -85,6 +87,14 @@
 .list__item {
   @include breakpoint($medium) {
     padding-right: $right-sidebar-width-narrow;
+
+  }
+  .archive__item{
+    border-bottom: 3px solid $border-color;
+
+    h3 {
+      color: #AAA;
+    }
   }
 
 /*

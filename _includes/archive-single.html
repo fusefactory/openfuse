@@ -26,8 +26,8 @@
           {% endif %}
           alt="">
       </div>
-    {% endif %}    
-    
+    {% endif %}
+
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | absolute_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
@@ -35,28 +35,30 @@
         <a href="{{ post.url | absolute_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    <p>
+    <h3>
     {% if post.author %}
-     <strong>Author: </strong> {{ post.author }}<br />
+     <strong>AUTHOR: </strong> {{ post.author }}<br />
     {% endif %}
     {% if post.last_modified_at %}
-     <strong>{{ site.data.ui-text[site.locale].date_label | default: "Updateddasda:" }}</strong> <time datetime="{{ post.last_modified_at | date: "%Y-%m-%d" }}">{{ post.last_modified_at | date: "%B %d, %Y" }}</time>
+     <strong>UPDATED:</strong> <time datetime="{{ post.last_modified_at | date: "%Y-%m-%d" }}">{{ post.last_modified_at | date: "%B %d, %Y" }}</time>
     {% elsif post.date %}
-      <strong>{{ site.data.ui-text[site.locale].date_label | default: "Updatedfdd:" }}</strong> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      <strong>UPDATED:</strong> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
     {% endif %}
-    </p>
+  </h3>
 <!--    {% if post.read_time %}-->
 <!--      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>-->
 <!--    {% endif %}-->
     <br />
     {% if post.img %}
-      <img src="{{img}}" class="author__avatar" alt="" itemprop="image" />   
+      <img src="{{img}}" class="author__avatar" alt="" itemprop="image" />
     {% endif %}
     {% if post.abstract%}
     <p>{{ post.abstract }}</p>
+    {% else %}
+    <br /><br />
     {% endif %}
 
 <!--    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 500 }}</p>{% endif %}-->
   </article>
-  <br />
+  <br /><br />
 </div>
