@@ -45,7 +45,6 @@ To record you screen capture as a movie you need to add this lines to some of yo
 ```
     ofxFFmpegRecorder    vidRecorder;
     ofFbo                recordFbo;
-    ofFbo 				 recordFboFlip;
     ofPixels             recordPixels;
     ofxFastFboReader     reader;
 ```
@@ -61,7 +60,6 @@ To record you screen capture as a movie you need to add this lines to some of yo
     vidRecorder.setBitRate(2000000);
     
     recordFbo.allocate( ofGetWidth(), ofGetHeight(), GL_RGB );
-    recordFboFlip.allocate( ofGetWidth(), ofGetHeight(), GL_RGB );
 ```
 
 
@@ -74,14 +72,10 @@ To record you screen capture as a movie you need to add this lines to some of yo
     
     recordFbo.end();
     
-    //the following 3 rows need to vertical flip of the fbo.. wout you record (and show on screen) your output upside down
-    recordFboFlip.begin();
-    recordFbo.draw(0,recordFbo.getHeight(),recordFbo.getWidth(),-recordFbo.getHeight());
-    recordFboFlip.end();
     
     if (vidRecorder.isRecording()) {
         //  ofxFastFboReader is used to speed this up :)
-        reader.readToPixels(recordFboFlip, recordPixels);
+        reader.readToPixels(recordFbo, recordPixels);
         
         if (recordPixels.getWidth() > 0 && recordPixels.getHeight() > 0) {
             vidRecorder.addFrame(recordPixels);
@@ -89,7 +83,7 @@ To record you screen capture as a movie you need to add this lines to some of yo
     }
     
     //need if you want to visualize your output on the screen
-    recordFboFlip.draw(0,0,recordFbo.getWidth(),recordFbo.getHeight());
+    recordFbo.draw(0,0,recordFbo.getWidth(),recordFbo.getHeight());
 ```
 
 
