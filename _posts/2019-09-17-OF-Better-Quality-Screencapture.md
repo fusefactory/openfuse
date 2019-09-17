@@ -9,7 +9,7 @@ categories:
 img: 'https://fusefactory.github.io/openfuse/images_posts/of_capture.png'
 abstract: Tutorial on how to record BETTER videos out of openFrameworks.
 ---
-{% include video id="216023820" provider="vimeo" %}
+{% include video id="360597143" provider="vimeo" %}
 
 We find another solution to record openFrameworks video ouput that solve the restriction to have specific resolution 1920x1080 or less.
 
