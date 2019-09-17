@@ -1,6 +1,6 @@
 ---
 published: true
-author: Luca Camellini
+author: Luca Camellini + Samuel Pietri
 tags:
   - openframeworks
   - tools
