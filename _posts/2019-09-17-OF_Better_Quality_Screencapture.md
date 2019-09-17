@@ -1,5 +1,13 @@
 ---
-published: false
+published: true
+author: Luca Camellini
+tags:
+  - openframeworks
+  - tools
+categories:
+  - coding
+img: 'https://fusefactory.github.io/openfuse/images_posts/of_capture.png'
+abstract: Tutorial on how to record BETTER videos out of openFrameworks.
 ---
 {% include video id="216023820" provider="vimeo" %}
 
