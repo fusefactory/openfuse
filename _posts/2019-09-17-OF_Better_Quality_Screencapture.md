@@ -10,7 +10,7 @@ Thanks to [Nick Hardeman](https://github.com/NickHardeman) to implement ofxFFmpe
 ofxFFmpegRecorder needs [ffmpeg](http://ffmpeg.org), the cross-platform tool for AV conversion. To install it you can use [homebrew](https://brew.sh) from OSX Terminal:
 
 ```
-	brew install ffmpeg
+brew install ffmpeg
 ```
 
 If you haven't **homebrew** yet on your system just type this on Terminal:
