@@ -10,7 +10,7 @@ img: >-
   https://fusefactory.github.io/openfuse/images_posts/Screenshot 2019-09-17 at
   19.11.41.png
 abstract: Tutorial on how to record BETTER videos out of openFrameworks.
-title: OF better screen caprtures!
+title: OF better screen captures!
 ---
 {% include video id="360597143" provider="vimeo" %}
 
